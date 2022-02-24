@@ -1,10 +1,22 @@
-﻿#include <iostream>// 1 байт - 8 бит - int - 4 байта - 32 бита
+﻿/*
+				| Copyright 2022 | MaximFLUNN | Maxim Filatov Group: 3821B1PR2 |
+				|      GitHub profile link: https://github.com/MaximFLUNN      |
+-------------------------------------------------------------------------------------------------------
+									   | Main source file |
+| [ENG] Task 1 (option 6): Develop a LongLong class to work with 64-bit integers represented by two fields:
+int - high part, unsigned int - low part each 32 bits long. The class must contain constructors / destructors
+as well as assignment, addition, subtraction, multiplication, division, comparison, input / output operations |
+| [RU] Task 1 (вариант 6): Разработать класс LongLong для работы с целыми 64 битовыми числами, представленными двумя полями: 
+int - старшая часть, unsigned int - младшая часть каждые длиной по 32 бита. 
+Класс должен содержать конструкторы/деструктор а так же операции присваивания, сложения, вычитания, умножения, деления,
+сравнения, ввод/вывод |
+*/
+#include <iostream>// 1 байт - 8 бит - int - 4 байта - 32 бита
 #define MAX_32_INT_NUMBER 2147483647 
 #define MIN_32_INT_NUMBER -2147483648
-#define MAX_32_UNSSIGNED_INT_NUMBER 4294967295 // min 0
+#define MAX_32_UNSSIGNED_INT_NUMBER 4294967295
 #define MAX_64_BIT_NUMBER 9223372036854775807
 #define MIN_64_BIT_NUMBER -9223372036854775808
-#define MAX_64_BIT_UNSIGNED_INT_NUMBER 18446744073709551616 // min 0
 using std::cout;
 using std::cin;
 using std::endl;
@@ -18,29 +30,26 @@ int main() {
 		int high;                              // 32 бита (+/-)
 		unsigned int low;                      // 32 бита  (+)
 	
-		_long_long_number() {
+		_long_long_number() { // Конструктор по умолчанию
 			high = MAX_32_INT_NUMBER;          // 32 бита (+/-)
 			low = MAX_32_UNSSIGNED_INT_NUMBER; // 32 бита  (+)
 		}
 
-		_long_long_number(int _high, unsigned int _low) {
+		_long_long_number(int _high, unsigned int _low) { // Конструктор инициализации при вводе двух 32 битных чисел
 			high = _high;					   // 32 бита (+/-)
 			low = _low;						   // 32 бита  (+)
 		}
 
-		_long_long_number(_longlong_result number) {
+		_long_long_number(_longlong_result number) { // Конструктор инициализации при вводе 64 битного числа
 			high = number >> 32;			   // 32 бита (+/-)
 			low = number - (number << 32);	   // 32 бита  (+)
 		}
 
-		_long_long_number(const _long_long_number& number) {
+		_long_long_number(const _long_long_number& number) { // Конструктор копирования
 			high = number.high;                // 32 бита (+/-)
 			low = number.low;                  // 32 бита  (+)
 		}
-		~_long_long_number() 
-		{
-
-		}
+		~_long_long_number() {} // Деструктор
 		bool ravno(const _long_long_number& number) { // Операция сравнения вводится 64 битное число
 			if ((high == number.high) && (low == number.low)) return true;
 			else return false;
