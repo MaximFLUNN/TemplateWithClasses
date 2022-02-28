@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1)-Task-one-time-main.cpp" />
+    <ClCompile Include="Time_class.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Time_class.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
