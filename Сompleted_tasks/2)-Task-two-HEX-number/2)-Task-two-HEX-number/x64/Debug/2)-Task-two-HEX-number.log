@@ -1,0 +1,9 @@
+﻿  HEX-number-class.cpp
+C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\2)-Task-two-HEX-number\2)-Task-two-HEX-number\HEX-number-class.cpp(8,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\2)-Task-two-HEX-number\2)-Task-two-HEX-number\HEX-number-class.cpp(18,144): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\2)-Task-two-HEX-number\2)-Task-two-HEX-number\HEX-number-class.cpp(18,201): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\2)-Task-two-HEX-number\2)-Task-two-HEX-number\HEX-number-class.cpp(59,27): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\2)-Task-two-HEX-number\2)-Task-two-HEX-number\HEX-number-class.cpp(70,28): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  HEX-number-main.cpp
+  Создание кода...
+  2)-Task-two-HEX-number.vcxproj -> C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\2)-Task-two-HEX-number\x64\Debug\2)-Task-two-HEX-number.exe
