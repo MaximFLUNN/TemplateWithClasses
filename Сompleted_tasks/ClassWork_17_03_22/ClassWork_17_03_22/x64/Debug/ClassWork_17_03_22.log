@@ -1,9 +1,9 @@
 ﻿  Main.cpp
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(147,44): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(157,38): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(159,38): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(161,38): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(167,28): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(174,33): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(180,131): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(133,32): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(146,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(148,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(150,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(159,16): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(164,46): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\ClassWork_17_03_22\Main.cpp(173,119): warning C4244: =: преобразование "double" в "float", возможна потеря данных
   ClassWork_17_03_22.vcxproj -> D:\Project_station_v3\Project station v2\Сompleted_tasks\ClassWork_17_03_22\x64\Debug\ClassWork_17_03_22.exe
