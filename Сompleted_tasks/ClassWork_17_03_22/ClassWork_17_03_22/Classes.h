@@ -13,12 +13,10 @@ public:
 		back_flag = 0;
 		exit_flag = 0;
 		user_choosen = 0;
-		_inputType = bySides;
 	};
 
 	~MyMenu(){};
 
-	Type _inputType;
 	int user_choosen = 0;
 	bool exit_flag = false, back_flag = false;
 
@@ -130,48 +128,92 @@ public:
 	Triangle() {
 		p = 0;
 		S = 0;
+		_inputType = bySides;
 	};
 
 	Triangle(int AB, int BC, int AC) {
 		side = Sides(AB, BC, AC);
+		_inputType = bySides;
 	};
 
 	Triangle(int h) {
 		bh.h = h;
+		_inputType = byBaseAndHeight;
 	}
 
 	Triangle(int* A, int* B, int* C) {
 		point = Point(A, B, C);
+		_inputType = byPointsCoords;
 	}
 
 	~Triangle(){};
 
 	float GetP() { return p; }
 	float GetS() { return S; }
-	float p, S;
+	float p = 0, S = 0;
 
 	Point point;
 	Sides side;
 	BaseAndHeight bh;
+	Type _inputType;
 
-	void InputTriangle(int& user_choosen, Type _inputType, int& AB, int& BC, int& AC, int& h, int* A, int* B, int* C) {
-		switch (user_choosen) {
-		case 1:
-			MenuInputBySides(_inputType, AB, BC, AC);
+	friend std::istream& operator >> (std::istream& in, Triangle& triangle) {
+		switch (triangle._inputType) {
+		case bySides:
+			while (1) {
+				std::cout << "Input 3 side of triangle (between space): ";
+				in >> triangle.side.AB >> triangle.side.BC >> triangle.side.AC;
+				if (!(triangle.side.AB + triangle.side.BC > triangle.side.AC && triangle.side.AB + triangle.side.AC > triangle.side.BC && triangle.side.AC + triangle.side.BC > triangle.side.AB)) {
+					std::cout << "Input error: triangle dont exist" << std::endl;
+					std::cout << "Try again" << std::endl;
+					continue;
+				}
+				triangle = Triangle(triangle.side.AB, triangle.side.BC, triangle.side.AC);
+				break;
+			}
 			break;
-		case 2:
-			MenuInputByBaseAndHeight(_inputType, AB, h);
+		case byBaseAndHeight:
+			std::cout << "Input base of triangle: ";
+			in >> triangle.side.AB;
+			std::cout << "Input height of triangle: ";
+			in >> triangle.bh.h;
 			break;
-		case 3:
-			MenuInputByPointsCoords(_inputType, A, B, C);
+		case byPointsCoords:
+			std::cout << "Input 1st point's coordinates (between space): ";
+			in >> triangle.point.A[0] >> triangle.point.A[1];
+			std::cout << "Input 2nd point's coordinates (between space): ";
+			in >> triangle.point.B[0] >> triangle.point.B[1];
+			std::cout << "Input 3rd point's coordinates (between space): ";
+			in >> triangle.point.C[0] >> triangle.point.C[1];
 			break;
 		default:
 			std::cout << "Input error: error in input" << std::endl;
 		}
+		return in;
+	};
+
+	void InputTriangle(int& user_choosen, Type _inputType, int& AB, int& BC, int& AC, int& h, int* A, int* B, int* C) {
+		if (user_choosen == 1) { this->_inputType = bySides; }
+		else if (user_choosen == 2) { this->_inputType = byBaseAndHeight; }
+		else { this->_inputType = byPointsCoords; }
+		//this->_inputType = user_choosen;
+		std::cin >> *this;
+		/*switch (user_choosen) {
+		case 1:
+			MenuInputBySides(AB, BC, AC);
+			break;
+		case 2:
+			MenuInputByBaseAndHeight(AB, h);
+			break;
+		case 3:
+			MenuInputByPointsCoords(A, B, C);
+			break;
+		default:
+			std::cout << "Input error: error in input" << std::endl;
+		}*/
 	}
 
-	void MenuInputBySides(Type& _inputType, int& AB, int& BC, int& AC) {
-		_inputType = bySides;
+	/*void MenuInputBySides(int& AB, int& BC, int& AC) {
 		while (1) {
 			std::cout << "Input 3 side of triangle (between space): ";
 			std::cin >> AB >> BC >> AC;
@@ -185,23 +227,21 @@ public:
 		}
 	}
 
-	void MenuInputByBaseAndHeight(Type& _inputType, int& AB, int& h) {
-		_inputType = byBaseAndHeight;
+	void MenuInputByBaseAndHeight(int& AB, int& h) {
 		std::cout << "Input base of triangle: ";
 		std::cin >> AB;
 		std::cout << "Input height of triangle: ";
 		std::cin >> h;
 	}
 
-	void MenuInputByPointsCoords(Type& _inputType, int* A, int* B, int* C) {
-		_inputType = byPointsCoords;
+	void MenuInputByPointsCoords(int* A, int* B, int* C) {
 		std::cout << "Input 1st point's coordinates (between space): ";
 		std::cin >> A[0] >> A[1];
 		std::cout << "Input 2nd point's coordinates (between space): ";
 		std::cin >> B[0] >> B[1];
 		std::cout << "Input 3rd point's coordinates (between space): ";
 		std::cin >> C[0] >> C[1];
-	}
+	}*/
 
 	void CalculationSqureBySides(Type& _inputType, int& AB, int& BC, int& AC, float& p, float& S) {
 		if (_inputType == bySides) {
@@ -323,10 +363,15 @@ public:
 		}
 	}
 
+	friend bool operator == (Triangle& first, Triangle& second) {
+		if (first.S == second.S) { return true; }
+		else { return false; }
+	};
+
 	void AnalyseTwoTriangleSquare(Triangle second, Type _inputType) {
 		CalculatingSquare(_inputType, side.AB, side.BC, side.AC, bh.h, point.A, point.B, point.C, p, S);
 		second.CalculatingSquare(_inputType, second.side.AB, second.side.BC, second.side.AC, second.bh.h, second.point.A, second.point.B, second.point.C, second.p, second.S);
-		if (S == second.S) { std::cout << "The square of the triangles are square" << std::endl; }
+		if (*this == second) { std::cout << "The square of the triangles are square" << std::endl; }
 		else { std::cout << "Triangles square not square" << std::endl; }
 	}
 

@@ -77,7 +77,7 @@ int main() {
     while (!menu.exit_flag) {
         menu.back_flag = false;
         menu.MenuUserChoosenInput(menu.user_choosen);
-        first.InputTriangle(menu.user_choosen, menu._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C);
+        first.InputTriangle(menu.user_choosen, first._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C);
         while (!menu.back_flag) {
             menu.MenuChooseMethods(menu.user_choosen);
             switch (menu.user_choosen) {
@@ -85,18 +85,18 @@ int main() {
                 menu.exit_flag = true;
                 break;
             case 1:
-                first.CalculatingSquare(menu._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C, first.p, first.S);
+                first.CalculatingSquare(first._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C, first.p, first.S);
                 break;
             case 2:
-                first.CalculatingPerimetr(menu._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C, first.p);
+                first.CalculatingPerimetr(first._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C, first.p);
                 break;
             case 3:
-                first.Comparison(menu._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C);
+                first.Comparison(first._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C);
                 break;
             case 4:
                 menu.MenuUserChoosenInput(menu.user_choosen);
-                second.InputTriangle(menu.user_choosen, menu._inputType, second.side.AB, second.side.BC, second.side.AC, second.bh.h, second.point.A, second.point.B, second.point.C);
-                first.AnalyseTwoTriangleSquare(second, menu._inputType);
+                second.InputTriangle(menu.user_choosen, second._inputType, second.side.AB, second.side.BC, second.side.AC, second.bh.h, second.point.A, second.point.B, second.point.C);
+                first.AnalyseTwoTriangleSquare(second, first._inputType);
                 break;
             case 5:
                 menu.back_flag = true;
@@ -104,7 +104,7 @@ int main() {
             default:
                 std::cout << "Input error: error in input" << std::endl;
             }
-            menu.PrintParam(menu.exit_flag, menu.back_flag, menu._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C);
+            menu.PrintParam(menu.exit_flag, menu.back_flag, first._inputType, first.side.AB, first.side.BC, first.side.AC, first.bh.h, first.point.A, first.point.B, first.point.C);
             break;
         }
     }
