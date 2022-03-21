@@ -35,6 +35,9 @@ string FilmLibrary::GetFilmProducer() { return FilmProducer; }
 string FilmLibrary::GetFilmScreenwriter() { return FilmScreenwriter; }
 string FilmLibrary::GetFilmComposer() { return FilmComposer; }
 struct Date FilmLibrary::GetFilmDate() { return FilmDate; }
+int FilmLibrary::GetFilmDate_day() { return FilmDate.Day; }
+int FilmLibrary::GetFilmDate_month() { return FilmDate.Month; }
+int FilmLibrary::GetFilmDate_year() { return FilmDate.Year; }
 int FilmLibrary::GetFees() { return Fees; }
 
 /*---------------- = Сеттеры = ------------------*/

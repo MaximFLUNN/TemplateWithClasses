@@ -5,9 +5,6 @@
 #include <string>
 using std::string;
 
-const string _FilmName[] = { "Original", "Scene", "Hollywood", "Matrix", "Tape", "Foreign", "Heroine", "Shooting", "The Grand Prix", "Allen" };
-const string _FilmPeople[] = { "Felix M.A.", "Fake A.A.", "Kity Y.U.", "Pavel L.S.", "Tape K.K.", "Jeffrey N.N.", "Mary D.A.", "Jane I.N.", "Grind F.F.", "Alien G.G." };
-
 // Структура хранящая дату фильма
 struct Date
 {
@@ -49,6 +46,9 @@ public:
 	string GetFilmScreenwriter();
 	string GetFilmComposer();
 	struct Date GetFilmDate();
+	int GetFilmDate_day();
+	int GetFilmDate_month();
+	int GetFilmDate_year();
 	int GetFees();
 
 	/*---------------- = Сеттеры = ------------------*/

@@ -2,7 +2,7 @@
 #include "Main_Functions_Header.h"
 
 int main() {
-	srand(time(0));
+	srand(time(NULL));
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	std::vector <FilmLibrary> Films;
