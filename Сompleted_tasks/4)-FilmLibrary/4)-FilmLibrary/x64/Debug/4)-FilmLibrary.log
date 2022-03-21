@@ -1,0 +1,5 @@
+﻿  FilmLibrary_Class.cpp
+  Main.cpp
+D:\Project_station_v3\Project station v2\Сompleted_tasks\4)-FilmLibrary\4)-FilmLibrary\Main.cpp(5,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  4)-FilmLibrary.vcxproj -> D:\Project_station_v3\Project station v2\Сompleted_tasks\4)-FilmLibrary\x64\Debug\4)-FilmLibrary.exe
