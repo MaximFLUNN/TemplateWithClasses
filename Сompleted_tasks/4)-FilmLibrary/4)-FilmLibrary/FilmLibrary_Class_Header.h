@@ -3,6 +3,7 @@
 #include <vector>
 #include <windows.h>                                        
 #include <string>
+#include <fstream>
 using std::string;
 
 // Структура хранящая дату фильма

@@ -1,10 +1,10 @@
 #include "FilmLibrary_Class_Header.h"
 // Конструктор по умолчанию
 FilmLibrary::FilmLibrary(){
-	FilmName = "Unknown";
-	FilmProducer = "None";
-	FilmScreenwriter = "None";
-	FilmComposer = "None";
+	FilmName = "";
+	FilmProducer = "";
+	FilmScreenwriter = "";
+	FilmComposer = "";
 	FilmDate = { 0 };
 	Fees = 0;
 }

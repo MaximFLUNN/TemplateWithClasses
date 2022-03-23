@@ -11,6 +11,10 @@ string InputFilmScreenwriter(string Screenwriter);
 string InputFilmComposer(string FilmComposer);
 struct Date InputFilmDate(int Numbers);
 int InputFilmFees(int Numbers);
+void SaveLibrary(std::vector<FilmLibrary> Films);
+void _LoadLibrary(std::vector<FilmLibrary>& Films);
+class FilmLibrary ConvertLineToFilm(string line);
+void GeneralSort(std::vector<FilmLibrary>& Films);
 
 enum choose {
 	IvalidValue,
@@ -32,6 +36,17 @@ enum choose {
 	DeleteFilm_name,
 	LoadFilmLibrary,
 	SaveFilmLibrary
+};
+
+enum film {
+	_name = 0,
+	_producer = 1,
+	_screenwriter = 2,
+	_composer = 3,
+	_day = 4,
+	_month = 5,
+	_year = 6,
+	_fees = 7
 };
 
 void MenuPrint(int& user_choose) {
@@ -218,8 +233,11 @@ void Menu_choose(int user_choose, std::vector <FilmLibrary>& Films) {
 				return;
 			}
 			system("cls");
-			for (int i = 0, j = 0; i < Films.size() && j < count; i++, j++) {
-				if (Films[i].GetFilmDate_year() == _year) { Films[i].PrintInfo(); }
+			for (int i = 0, j = 0; i < Films.size() && j < count; i++) {
+				if (Films[i].GetFilmDate_year() == _year) { 
+					Films[i].PrintInfo();
+					j++;
+				}
 			}
 		}
 	}
@@ -235,11 +253,14 @@ void Menu_choose(int user_choose, std::vector <FilmLibrary>& Films) {
 			std::cout << "Введёный номер больше кол-ва фильмов!\n";
 		}
 	}
+
 	else if (user_choose == DeleteFilm_name) {
+		system("cls");
 		string name;
 		bool work = false;
 		std::cout << "Введите название фильма: ";
-		std::cin >> name;
+		std::cin.ignore();
+		getline(std::cin, name);
 		system("cls");
 		for (int i = 0; i < Films.size(); i++) {
 			if (Films[i].GetFilmName() == name) {
@@ -255,6 +276,14 @@ void Menu_choose(int user_choose, std::vector <FilmLibrary>& Films) {
 		std::vector<FilmLibrary>().swap(Films);
 		std::cout << "Фильмотека очищена\n";
 	}
+
+	else if (user_choose == LoadFilmLibrary) {
+		_LoadLibrary(Films);
+	}
+
+	else if (user_choose == SaveFilmLibrary) {
+		SaveLibrary(Films);
+	}
 }
 
 class FilmLibrary AddFilm(bool ignore) {
@@ -267,7 +296,6 @@ class FilmLibrary AddFilm(bool ignore) {
 	Film.SetFilmComposer(InputFilmComposer(Input));
 	Film.SetFilmDate_All(InputFilmDate(Numbers));
 	Film.SetFilmFees(InputFilmFees(Numbers));
-	//Film = FilmLibrary(InputFilmName(Input), InputFilmProducer(Input), InputFilmScreenwriter(Input), InputFilmComposer(Input), InputFilmDate(Numbers), InputFilmFees(Numbers));
 	return Film;
 }
 
@@ -318,12 +346,90 @@ int InputFilmFees(int Numbers) {
 
 void SortToFees(std::vector <FilmLibrary>& Films) {
 	FilmLibrary temp;
+	if (Films.size()) {
+		for (int i = 0; i < Films.size() - 1; i++) {
+			for (int j = 0; j < Films.size() - i - 1; j++) {
+				if (Films[j].GetFees() < Films[j + 1].GetFees()) {
+					temp = Films[j];
+					Films[j] = Films[j + 1];
+					Films[j + 1] = temp;
+				}
+			}
+		}
+	}
+}
+
+void SaveLibrary(std::vector<FilmLibrary> Films) {
+	std::ofstream out_file;
+	out_file.open("LibrarySettings.txt", std::ios::out);
+	if (out_file.is_open()) {
+		for (int i = 0; i < Films.size(); i++) {
+			out_file << i << ") " << Films[i].GetFilmName() << " | " << Films[i].GetFilmProducer()
+				<< " | " << Films[i].GetFilmScreenwriter()	<< " | " << Films[i].GetFilmComposer()
+				<< " | " << Films[i].GetFilmDate_day() << "." << Films[i].GetFilmDate_month()
+				<< "." << Films[i].GetFilmDate_year() << " | " << Films[i].GetFees() << " |\n";
+		}
+		std::cout << "Сохранение [Успешно]\n";
+	}
+	else { std::cout << "Сохранение [Ошибка открытия файла] \n"; }
+	out_file.close();
+}
+
+void _LoadLibrary(std::vector<FilmLibrary>& Films) {
+	std::vector<FilmLibrary>().swap(Films);
+	std::ifstream in_file;
+	std::string line;
+	in_file.open("LibrarySettings.txt", std::ios::in);
+	if (in_file.is_open()) {
+		while (getline(in_file, line)) {
+			Films.push_back(ConvertLineToFilm(line));
+		}
+		std::cout << "Загрузка [Успешно]\n";
+		std::cout << "Загружено: " << Films.size() << " Фильмов\n";
+	}
+	else { std::cout << "Загрузка [Ошибка открытия файла] \n"; }
+}
+
+class FilmLibrary ConvertLineToFilm(std::string line) {
+	FilmLibrary Film;
+	for (int i = 3, _switch = 0; i < line.size() - 2; i++) {
+		if (line[i] == ' ' && line[i + 1] == '|' && line[i + 2] == ' ') {
+			_switch++;
+			i += 3;
+		}
+		if (line[i + 1] == '|' || line[i] == '.') {
+			_switch++;
+			i++;
+		}
+		if (_switch == _name) { Film.SetFilmName(Film.GetFilmName() + line[i]); }
+		else if (_switch == _producer) { Film.SetFilmProducer(Film.GetFilmProducer() + line[i]); }
+		else if (_switch == _screenwriter) { Film.SetFilmScreenwriter(Film.GetFilmScreenwriter() + line[i]); }
+		else if (_switch == _composer) { Film.SetFilmComposer(Film.GetFilmComposer() + line[i]); }
+		else if (_switch == _day) { Film.SetFilmDate_Day(Film.GetFilmDate_day() * 10 + line[i] - 0x30); }
+		else if (_switch == _month) { Film.SetFilmDate_Month(Film.GetFilmDate_month() * 10 + line[i] - 0x30); }
+		else if (_switch == _year) { Film.SetFilmDate_Year(Film.GetFilmDate_year() * 10 + line[i] - 0x30); }
+		else if (_switch == _fees) { Film.SetFilmFees(Film.GetFees() * 10 + line[i] - 0x30); }
+	}
+	return Film;
+}
+
+void GeneralSort(std::vector<FilmLibrary>& Films) {
+	FilmLibrary tmp_film;
+	for (int i = 0; i < Films.size() - 1; i++){
+		for (int j = i + 1; j < Films.size(); j++) {
+			if (strcmp((Films[i].GetFilmName().c_str()), Films[j].GetFilmName().c_str()) > 0) {
+				tmp_film = Films[i];
+				Films[i] = Films[j];
+				Films[j] = tmp_film;
+			}
+		}
+	}
 	for (int i = 0; i < Films.size() - 1; i++) {
 		for (int j = 0; j < Films.size() - i - 1; j++) {
-			if (Films[j].GetFees() > Films[j + 1].GetFees()) {
-				temp = Films[j];
+			if (Films[j].GetFilmDate_year() < Films[j + 1].GetFilmDate_year()) {
+				tmp_film = Films[j];
 				Films[j] = Films[j + 1];
-				Films[j + 1] = temp;
+				Films[j + 1] = tmp_film;
 			}
 		}
 	}
