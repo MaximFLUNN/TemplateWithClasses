@@ -1,0 +1,4 @@
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\x64\Debug\Task5_Railway.vcxproj.AssemblyReference.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\x64\Debug\Task5_Railway.vcxproj.SuggestedBindingRedirects.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\x64\Debug\Task5Railway.MyForm.resources
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\x64\Debug\Task5_Railway.vcxproj.GenerateResource.cache
