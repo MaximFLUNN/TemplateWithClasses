@@ -1,6 +1,6 @@
 ﻿  MyForm.cpp
-D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\MyForm.h(51,14): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\MyForm.h(112,1): warning C4965: неявная упаковка целого числа 0; используйте nullptr или явное приведение типов
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\MyForm.h(198,14): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\MyForm.h(259,1): warning C4965: неявная упаковка целого числа 0; используйте nullptr или явное приведение типов
 D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\Task5_Railway\MyForm.cpp(7,33): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Task5_Railway.vcxproj -> D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5_Railway\x64\Debug\Task5_Railway.exe

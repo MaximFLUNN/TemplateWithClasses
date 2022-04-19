@@ -32,7 +32,154 @@ namespace Task5Railway {
 	private: System::Windows::Forms::PictureBox^ pictureBoxWellcome;
 	private: System::Windows::Forms::Panel^ panelFaster;
 	private: System::Windows::Forms::Panel^ activePanelFast_1;
+
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker2;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePickerFast_1;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::Button^ FastButton_1_2;
+
+	private: System::Windows::Forms::Button^ FastButton_1_1;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_1_1;
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_2;
+
+
+
+
+
+
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_1;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_1_2;
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_4;
+
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_3;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_1_3;
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_8;
+
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_7;
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_6;
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_1_5;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_1_4;
+	private: System::Windows::Forms::Label^ lblFastPrice_1;
+
+
+
+	private: System::Windows::Forms::Label^ lblFastTrip_1;
+
+	private: System::Windows::Forms::Label^ lblFastTime_1;
+	private: System::Windows::Forms::Label^ lblFastCount_1;
+
+
+	private: System::Windows::Forms::Panel^ activePanelFast_3;
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_3_4;
+	private: System::Windows::Forms::Label^ lblFastCount_3;
+	private: System::Windows::Forms::Label^ lblFastPrice_3;
+
+
+
+
+	private: System::Windows::Forms::Label^ lblFastTrip_3;
+
+	private: System::Windows::Forms::Label^ lblFastTime_3;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_3_3;
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_8;
+
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_7;
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_6;
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_5;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_3_2;
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_4;
+
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_3;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_3_1;
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_2;
+
+
+	private: System::Windows::Forms::RadioButton^ radioButtonFast_3_1;
+
+	private: System::Windows::Forms::Button^ FastButton_3_2;
+
+
+	private: System::Windows::Forms::Button^ FastButton_3_1;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePickerFast_3;
+
+
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker5;
+	private: System::Windows::Forms::Panel^ activePanelFast_2;
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_2_4;
+private: System::Windows::Forms::Label^ lblFastCount_2;
+private: System::Windows::Forms::Label^ lblFastPrice_2;
+
+
+
+
+
+private: System::Windows::Forms::Label^ lblFastTrip_2;
+
+
+private: System::Windows::Forms::Label^ lblFastTime_2;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_2_3;
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_8;
+
+
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_7;
+
+
+
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_6;
+
+
+
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_5;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_2_2;
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_4;
+
+
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_3;
+
+	private: System::Windows::Forms::GroupBox^ groupBoxFast_2_1;
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_2;
+
+
+private: System::Windows::Forms::RadioButton^ radioButtonFast_2_1;
+
+private: System::Windows::Forms::Button^ FastButton_2_2;
+
+private: System::Windows::Forms::Button^ FastButton_2_1;
+private: System::Windows::Forms::DateTimePicker^ dateTimePickerFast_2;
+
+
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker8;
+
+
+
+
+
 
 
 
@@ -265,22 +412,100 @@ namespace Task5Railway {
 			this->panelCloseBar = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panelTitleBar = (gcnew System::Windows::Forms::Panel());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->btnMinimaze = (gcnew System::Windows::Forms::Button());
 			this->btnClose = (gcnew System::Windows::Forms::Button());
 			this->btnMaximize = (gcnew System::Windows::Forms::Button());
 			this->lblTitle = (gcnew System::Windows::Forms::Label());
 			this->panelDesktopPanel = (gcnew System::Windows::Forms::Panel());
 			this->panelFaster = (gcnew System::Windows::Forms::Panel());
-			this->pictureBoxWellcome = (gcnew System::Windows::Forms::PictureBox());
 			this->activePanelFast_1 = (gcnew System::Windows::Forms::Panel());
+			this->FastButton_1_2 = (gcnew System::Windows::Forms::Button());
+			this->FastButton_1_1 = (gcnew System::Windows::Forms::Button());
+			this->dateTimePickerFast_1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->pictureBoxWellcome = (gcnew System::Windows::Forms::PictureBox());
+			this->groupBoxFast_1_1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_1_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_1_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_1_2 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_1_4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_1_3 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_1_3 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_1_6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_1_5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_1_7 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_1_8 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_1_4 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblFastTime_1 = (gcnew System::Windows::Forms::Label());
+			this->lblFastTrip_1 = (gcnew System::Windows::Forms::Label());
+			this->lblFastPrice_1 = (gcnew System::Windows::Forms::Label());
+			this->lblFastCount_1 = (gcnew System::Windows::Forms::Label());
+			this->activePanelFast_2 = (gcnew System::Windows::Forms::Panel());
+			this->groupBoxFast_2_4 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblFastCount_2 = (gcnew System::Windows::Forms::Label());
+			this->lblFastPrice_2 = (gcnew System::Windows::Forms::Label());
+			this->lblFastTrip_2 = (gcnew System::Windows::Forms::Label());
+			this->lblFastTime_2 = (gcnew System::Windows::Forms::Label());
+			this->groupBoxFast_2_3 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_2_8 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_2_7 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_2_6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_2_5 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_2_2 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_2_4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_2_3 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_2_1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_2_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_2_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->FastButton_2_2 = (gcnew System::Windows::Forms::Button());
+			this->FastButton_2_1 = (gcnew System::Windows::Forms::Button());
+			this->dateTimePickerFast_2 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker8 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker5 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePickerFast_3 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->FastButton_3_1 = (gcnew System::Windows::Forms::Button());
+			this->FastButton_3_2 = (gcnew System::Windows::Forms::Button());
+			this->groupBoxFast_3_1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_3_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_3_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_3_2 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_3_3 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_3_4 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_3_3 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButtonFast_3_5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_3_6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_3_7 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButtonFast_3_8 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxFast_3_4 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblFastTime_3 = (gcnew System::Windows::Forms::Label());
+			this->lblFastTrip_3 = (gcnew System::Windows::Forms::Label());
+			this->lblFastPrice_3 = (gcnew System::Windows::Forms::Label());
+			this->lblFastCount_3 = (gcnew System::Windows::Forms::Label());
+			this->activePanelFast_3 = (gcnew System::Windows::Forms::Panel());
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			this->panelTitleBar->SuspendLayout();
+			this->panel1->SuspendLayout();
 			this->panelDesktopPanel->SuspendLayout();
 			this->panelFaster->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxWellcome))->BeginInit();
 			this->activePanelFast_1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxWellcome))->BeginInit();
+			this->groupBoxFast_1_1->SuspendLayout();
+			this->groupBoxFast_1_2->SuspendLayout();
+			this->groupBoxFast_1_3->SuspendLayout();
+			this->groupBoxFast_1_4->SuspendLayout();
+			this->activePanelFast_2->SuspendLayout();
+			this->groupBoxFast_2_4->SuspendLayout();
+			this->groupBoxFast_2_3->SuspendLayout();
+			this->groupBoxFast_2_2->SuspendLayout();
+			this->groupBoxFast_2_1->SuspendLayout();
+			this->groupBoxFast_3_1->SuspendLayout();
+			this->groupBoxFast_3_2->SuspendLayout();
+			this->groupBoxFast_3_3->SuspendLayout();
+			this->groupBoxFast_3_4->SuspendLayout();
+			this->activePanelFast_3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -452,6 +677,7 @@ namespace Task5Railway {
 			// 
 			this->panelTitleBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			this->panelTitleBar->Controls->Add(this->panel1);
 			this->panelTitleBar->Controls->Add(this->btnMinimaze);
 			this->panelTitleBar->Controls->Add(this->btnClose);
 			this->panelTitleBar->Controls->Add(this->btnMaximize);
@@ -463,6 +689,24 @@ namespace Task5Railway {
 			this->panelTitleBar->TabIndex = 1;
 			this->panelTitleBar->DoubleClick += gcnew System::EventHandler(this, &MyForm::btnMaximize_Click);
 			this->panelTitleBar->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseMove);
+			// 
+			// panel1
+			// 
+			this->panel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel1->BackColor = System::Drawing::Color::LightBlue;
+			this->panel1->Controls->Add(this->dateTimePicker2);
+			this->panel1->Location = System::Drawing::Point(0, 80);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(661, 120);
+			this->panel1->TabIndex = 1;
+			// 
+			// dateTimePicker2
+			// 
+			this->dateTimePicker2->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker2->Name = L"dateTimePicker2";
+			this->dateTimePicker2->Size = System::Drawing::Size(142, 22);
+			this->dateTimePicker2->TabIndex = 0;
 			// 
 			// btnMinimaze
 			// 
@@ -538,7 +782,9 @@ namespace Task5Railway {
 			// 
 			// panelFaster
 			// 
-			this->panelFaster->BackColor = System::Drawing::Color::SlateGray;
+			this->panelFaster->BackColor = System::Drawing::Color::LightBlue;
+			this->panelFaster->Controls->Add(this->activePanelFast_3);
+			this->panelFaster->Controls->Add(this->activePanelFast_2);
 			this->panelFaster->Controls->Add(this->activePanelFast_1);
 			this->panelFaster->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panelFaster->Location = System::Drawing::Point(0, 0);
@@ -546,6 +792,67 @@ namespace Task5Railway {
 			this->panelFaster->Size = System::Drawing::Size(661, 360);
 			this->panelFaster->TabIndex = 1;
 			this->panelFaster->Visible = false;
+			// 
+			// activePanelFast_1
+			// 
+			this->activePanelFast_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->activePanelFast_1->BackColor = System::Drawing::Color::Azure;
+			this->activePanelFast_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->activePanelFast_1->Controls->Add(this->groupBoxFast_1_4);
+			this->activePanelFast_1->Controls->Add(this->groupBoxFast_1_3);
+			this->activePanelFast_1->Controls->Add(this->groupBoxFast_1_2);
+			this->activePanelFast_1->Controls->Add(this->groupBoxFast_1_1);
+			this->activePanelFast_1->Controls->Add(this->FastButton_1_2);
+			this->activePanelFast_1->Controls->Add(this->FastButton_1_1);
+			this->activePanelFast_1->Controls->Add(this->dateTimePickerFast_1);
+			this->activePanelFast_1->Controls->Add(this->dateTimePicker1);
+			this->activePanelFast_1->Location = System::Drawing::Point(15, 10);
+			this->activePanelFast_1->Name = L"activePanelFast_1";
+			this->activePanelFast_1->Size = System::Drawing::Size(631, 100);
+			this->activePanelFast_1->TabIndex = 0;
+			// 
+			// FastButton_1_2
+			// 
+			this->FastButton_1_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->FastButton_1_2->BackColor = System::Drawing::Color::Gold;
+			this->FastButton_1_2->FlatAppearance->BorderSize = 0;
+			this->FastButton_1_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->FastButton_1_2->Location = System::Drawing::Point(517, 0);
+			this->FastButton_1_2->Name = L"FastButton_1_2";
+			this->FastButton_1_2->Size = System::Drawing::Size(112, 41);
+			this->FastButton_1_2->TabIndex = 3;
+			this->FastButton_1_2->Text = L"Заказать";
+			this->FastButton_1_2->UseVisualStyleBackColor = false;
+			// 
+			// FastButton_1_1
+			// 
+			this->FastButton_1_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->FastButton_1_1->BackColor = System::Drawing::Color::MediumAquamarine;
+			this->FastButton_1_1->FlatAppearance->BorderSize = 0;
+			this->FastButton_1_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->FastButton_1_1->Location = System::Drawing::Point(517, 41);
+			this->FastButton_1_1->Name = L"FastButton_1_1";
+			this->FastButton_1_1->Size = System::Drawing::Size(112, 40);
+			this->FastButton_1_1->TabIndex = 2;
+			this->FastButton_1_1->Text = L"Купить";
+			this->FastButton_1_1->UseVisualStyleBackColor = false;
+			// 
+			// dateTimePickerFast_1
+			// 
+			this->dateTimePickerFast_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->dateTimePickerFast_1->CalendarTitleForeColor = System::Drawing::Color::White;
+			this->dateTimePickerFast_1->Location = System::Drawing::Point(517, 81);
+			this->dateTimePickerFast_1->Name = L"dateTimePickerFast_1";
+			this->dateTimePickerFast_1->Size = System::Drawing::Size(112, 22);
+			this->dateTimePickerFast_1->TabIndex = 1;
+			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(142, 22);
+			this->dateTimePicker1->TabIndex = 0;
 			// 
 			// pictureBoxWellcome
 			// 
@@ -559,23 +866,677 @@ namespace Task5Railway {
 			this->pictureBoxWellcome->TabIndex = 0;
 			this->pictureBoxWellcome->TabStop = false;
 			// 
-			// activePanelFast_1
+			// groupBoxFast_1_1
 			// 
-			this->activePanelFast_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			this->groupBoxFast_1_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->activePanelFast_1->BackColor = System::Drawing::Color::SlateGray;
-			this->activePanelFast_1->Controls->Add(this->dateTimePicker1);
-			this->activePanelFast_1->Location = System::Drawing::Point(0, 0);
-			this->activePanelFast_1->Name = L"activePanelFast_1";
-			this->activePanelFast_1->Size = System::Drawing::Size(661, 120);
-			this->activePanelFast_1->TabIndex = 0;
+			this->groupBoxFast_1_1->Controls->Add(this->radioButtonFast_1_2);
+			this->groupBoxFast_1_1->Controls->Add(this->radioButtonFast_1_1);
+			this->groupBoxFast_1_1->Location = System::Drawing::Point(3, 0);
+			this->groupBoxFast_1_1->Name = L"groupBoxFast_1_1";
+			this->groupBoxFast_1_1->Size = System::Drawing::Size(114, 97);
+			this->groupBoxFast_1_1->TabIndex = 7;
+			this->groupBoxFast_1_1->TabStop = false;
+			this->groupBoxFast_1_1->Text = L"Тип вагона:";
 			// 
-			// dateTimePicker1
+			// radioButtonFast_1_1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(519, 98);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(142, 22);
-			this->dateTimePicker1->TabIndex = 0;
+			this->radioButtonFast_1_1->AutoSize = true;
+			this->radioButtonFast_1_1->Checked = true;
+			this->radioButtonFast_1_1->Location = System::Drawing::Point(8, 27);
+			this->radioButtonFast_1_1->Name = L"radioButtonFast_1_1";
+			this->radioButtonFast_1_1->Size = System::Drawing::Size(60, 20);
+			this->radioButtonFast_1_1->TabIndex = 5;
+			this->radioButtonFast_1_1->TabStop = true;
+			this->radioButtonFast_1_1->Text = L"Купе";
+			this->radioButtonFast_1_1->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_1_2
+			// 
+			this->radioButtonFast_1_2->AutoSize = true;
+			this->radioButtonFast_1_2->Location = System::Drawing::Point(8, 63);
+			this->radioButtonFast_1_2->Name = L"radioButtonFast_1_2";
+			this->radioButtonFast_1_2->Size = System::Drawing::Size(92, 20);
+			this->radioButtonFast_1_2->TabIndex = 7;
+			this->radioButtonFast_1_2->TabStop = true;
+			this->radioButtonFast_1_2->Text = L"Плацкарт";
+			this->radioButtonFast_1_2->UseVisualStyleBackColor = true;
+			this->radioButtonFast_1_2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton4_CheckedChanged);
+			// 
+			// groupBoxFast_1_2
+			// 
+			this->groupBoxFast_1_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_1_2->Controls->Add(this->radioButtonFast_1_4);
+			this->groupBoxFast_1_2->Controls->Add(this->radioButtonFast_1_3);
+			this->groupBoxFast_1_2->Location = System::Drawing::Point(125, 0);
+			this->groupBoxFast_1_2->Name = L"groupBoxFast_1_2";
+			this->groupBoxFast_1_2->Size = System::Drawing::Size(114, 97);
+			this->groupBoxFast_1_2->TabIndex = 8;
+			this->groupBoxFast_1_2->TabStop = false;
+			this->groupBoxFast_1_2->Text = L"Тип места:";
+			// 
+			// radioButtonFast_1_4
+			// 
+			this->radioButtonFast_1_4->AutoSize = true;
+			this->radioButtonFast_1_4->Location = System::Drawing::Point(8, 63);
+			this->radioButtonFast_1_4->Name = L"radioButtonFast_1_4";
+			this->radioButtonFast_1_4->Size = System::Drawing::Size(83, 20);
+			this->radioButtonFast_1_4->TabIndex = 7;
+			this->radioButtonFast_1_4->TabStop = true;
+			this->radioButtonFast_1_4->Text = L"Верхнее";
+			this->radioButtonFast_1_4->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_1_3
+			// 
+			this->radioButtonFast_1_3->AutoSize = true;
+			this->radioButtonFast_1_3->Checked = true;
+			this->radioButtonFast_1_3->Location = System::Drawing::Point(8, 27);
+			this->radioButtonFast_1_3->Name = L"radioButtonFast_1_3";
+			this->radioButtonFast_1_3->Size = System::Drawing::Size(79, 20);
+			this->radioButtonFast_1_3->TabIndex = 5;
+			this->radioButtonFast_1_3->TabStop = true;
+			this->radioButtonFast_1_3->Text = L"Нижнее";
+			this->radioButtonFast_1_3->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_1_3
+			// 
+			this->groupBoxFast_1_3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_1_3->Controls->Add(this->radioButtonFast_1_8);
+			this->groupBoxFast_1_3->Controls->Add(this->radioButtonFast_1_7);
+			this->groupBoxFast_1_3->Controls->Add(this->radioButtonFast_1_6);
+			this->groupBoxFast_1_3->Controls->Add(this->radioButtonFast_1_5);
+			this->groupBoxFast_1_3->Location = System::Drawing::Point(247, 0);
+			this->groupBoxFast_1_3->Name = L"groupBoxFast_1_3";
+			this->groupBoxFast_1_3->Size = System::Drawing::Size(126, 97);
+			this->groupBoxFast_1_3->TabIndex = 9;
+			this->groupBoxFast_1_3->TabStop = false;
+			this->groupBoxFast_1_3->Text = L"Кол-во человек:";
+			// 
+			// radioButtonFast_1_6
+			// 
+			this->radioButtonFast_1_6->AutoSize = true;
+			this->radioButtonFast_1_6->Location = System::Drawing::Point(8, 36);
+			this->radioButtonFast_1_6->Name = L"radioButtonFast_1_6";
+			this->radioButtonFast_1_6->Size = System::Drawing::Size(53, 20);
+			this->radioButtonFast_1_6->TabIndex = 7;
+			this->radioButtonFast_1_6->TabStop = true;
+			this->radioButtonFast_1_6->Text = L"Два";
+			this->radioButtonFast_1_6->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_1_5
+			// 
+			this->radioButtonFast_1_5->AutoSize = true;
+			this->radioButtonFast_1_5->Checked = true;
+			this->radioButtonFast_1_5->Location = System::Drawing::Point(8, 18);
+			this->radioButtonFast_1_5->Name = L"radioButtonFast_1_5";
+			this->radioButtonFast_1_5->Size = System::Drawing::Size(62, 20);
+			this->radioButtonFast_1_5->TabIndex = 5;
+			this->radioButtonFast_1_5->TabStop = true;
+			this->radioButtonFast_1_5->Text = L"Один";
+			this->radioButtonFast_1_5->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_1_7
+			// 
+			this->radioButtonFast_1_7->AutoSize = true;
+			this->radioButtonFast_1_7->Location = System::Drawing::Point(8, 54);
+			this->radioButtonFast_1_7->Name = L"radioButtonFast_1_7";
+			this->radioButtonFast_1_7->Size = System::Drawing::Size(53, 20);
+			this->radioButtonFast_1_7->TabIndex = 8;
+			this->radioButtonFast_1_7->TabStop = true;
+			this->radioButtonFast_1_7->Text = L"Три";
+			this->radioButtonFast_1_7->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_1_8
+			// 
+			this->radioButtonFast_1_8->AutoSize = true;
+			this->radioButtonFast_1_8->Location = System::Drawing::Point(8, 72);
+			this->radioButtonFast_1_8->Name = L"radioButtonFast_1_8";
+			this->radioButtonFast_1_8->Size = System::Drawing::Size(77, 20);
+			this->radioButtonFast_1_8->TabIndex = 9;
+			this->radioButtonFast_1_8->TabStop = true;
+			this->radioButtonFast_1_8->Text = L"Четыре";
+			this->radioButtonFast_1_8->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_1_4
+			// 
+			this->groupBoxFast_1_4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_1_4->Controls->Add(this->lblFastCount_1);
+			this->groupBoxFast_1_4->Controls->Add(this->lblFastPrice_1);
+			this->groupBoxFast_1_4->Controls->Add(this->lblFastTrip_1);
+			this->groupBoxFast_1_4->Controls->Add(this->lblFastTime_1);
+			this->groupBoxFast_1_4->Location = System::Drawing::Point(381, 0);
+			this->groupBoxFast_1_4->Name = L"groupBoxFast_1_4";
+			this->groupBoxFast_1_4->Size = System::Drawing::Size(130, 97);
+			this->groupBoxFast_1_4->TabIndex = 10;
+			this->groupBoxFast_1_4->TabStop = false;
+			this->groupBoxFast_1_4->Text = L"Информация:";
+			// 
+			// lblFastTime_1
+			// 
+			this->lblFastTime_1->AutoSize = true;
+			this->lblFastTime_1->Location = System::Drawing::Point(7, 21);
+			this->lblFastTime_1->Name = L"lblFastTime_1";
+			this->lblFastTime_1->Size = System::Drawing::Size(112, 16);
+			this->lblFastTime_1->TabIndex = 0;
+			this->lblFastTime_1->Text = L"Время: 2:40 - 5:35";
+			// 
+			// lblFastTrip_1
+			// 
+			this->lblFastTrip_1->AutoSize = true;
+			this->lblFastTrip_1->Location = System::Drawing::Point(7, 57);
+			this->lblFastTrip_1->Name = L"lblFastTrip_1";
+			this->lblFastTrip_1->Size = System::Drawing::Size(124, 16);
+			this->lblFastTrip_1->TabIndex = 1;
+			this->lblFastTrip_1->Text = L"Путь: НН - Москва";
+			// 
+			// lblFastPrice_1
+			// 
+			this->lblFastPrice_1->AutoSize = true;
+			this->lblFastPrice_1->Location = System::Drawing::Point(7, 74);
+			this->lblFastPrice_1->Name = L"lblFastPrice_1";
+			this->lblFastPrice_1->Size = System::Drawing::Size(83, 16);
+			this->lblFastPrice_1->TabIndex = 2;
+			this->lblFastPrice_1->Text = L"Стоимость: ";
+			// 
+			// lblFastCount_1
+			// 
+			this->lblFastCount_1->AutoSize = true;
+			this->lblFastCount_1->Location = System::Drawing::Point(7, 39);
+			this->lblFastCount_1->Name = L"lblFastCount_1";
+			this->lblFastCount_1->Size = System::Drawing::Size(46, 16);
+			this->lblFastCount_1->TabIndex = 3;
+			this->lblFastCount_1->Text = L"Мест: ";
+			// 
+			// activePanelFast_2
+			// 
+			this->activePanelFast_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->activePanelFast_2->BackColor = System::Drawing::Color::Azure;
+			this->activePanelFast_2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->activePanelFast_2->Controls->Add(this->groupBoxFast_2_4);
+			this->activePanelFast_2->Controls->Add(this->groupBoxFast_2_3);
+			this->activePanelFast_2->Controls->Add(this->groupBoxFast_2_2);
+			this->activePanelFast_2->Controls->Add(this->groupBoxFast_2_1);
+			this->activePanelFast_2->Controls->Add(this->FastButton_2_2);
+			this->activePanelFast_2->Controls->Add(this->FastButton_2_1);
+			this->activePanelFast_2->Controls->Add(this->dateTimePickerFast_2);
+			this->activePanelFast_2->Controls->Add(this->dateTimePicker8);
+			this->activePanelFast_2->Location = System::Drawing::Point(15, 130);
+			this->activePanelFast_2->Name = L"activePanelFast_2";
+			this->activePanelFast_2->Size = System::Drawing::Size(631, 100);
+			this->activePanelFast_2->TabIndex = 11;
+			// 
+			// groupBoxFast_2_4
+			// 
+			this->groupBoxFast_2_4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_2_4->Controls->Add(this->lblFastCount_2);
+			this->groupBoxFast_2_4->Controls->Add(this->lblFastPrice_2);
+			this->groupBoxFast_2_4->Controls->Add(this->lblFastTrip_2);
+			this->groupBoxFast_2_4->Controls->Add(this->lblFastTime_2);
+			this->groupBoxFast_2_4->Location = System::Drawing::Point(381, 0);
+			this->groupBoxFast_2_4->Name = L"groupBoxFast_2_4";
+			this->groupBoxFast_2_4->Size = System::Drawing::Size(130, 97);
+			this->groupBoxFast_2_4->TabIndex = 10;
+			this->groupBoxFast_2_4->TabStop = false;
+			this->groupBoxFast_2_4->Text = L"Информация:";
+			// 
+			// lblFastCount_2
+			// 
+			this->lblFastCount_2->AutoSize = true;
+			this->lblFastCount_2->Location = System::Drawing::Point(7, 39);
+			this->lblFastCount_2->Name = L"lblFastCount_2";
+			this->lblFastCount_2->Size = System::Drawing::Size(46, 16);
+			this->lblFastCount_2->TabIndex = 3;
+			this->lblFastCount_2->Text = L"Мест: ";
+			// 
+			// lblFastPrice_2
+			// 
+			this->lblFastPrice_2->AutoSize = true;
+			this->lblFastPrice_2->Location = System::Drawing::Point(7, 74);
+			this->lblFastPrice_2->Name = L"lblFastPrice_2";
+			this->lblFastPrice_2->Size = System::Drawing::Size(83, 16);
+			this->lblFastPrice_2->TabIndex = 2;
+			this->lblFastPrice_2->Text = L"Стоимость: ";
+			// 
+			// lblFastTrip_2
+			// 
+			this->lblFastTrip_2->AutoSize = true;
+			this->lblFastTrip_2->Location = System::Drawing::Point(7, 57);
+			this->lblFastTrip_2->Name = L"lblFastTrip_2";
+			this->lblFastTrip_2->Size = System::Drawing::Size(124, 16);
+			this->lblFastTrip_2->TabIndex = 1;
+			this->lblFastTrip_2->Text = L"Путь: НН - Москва";
+			// 
+			// lblFastTime_2
+			// 
+			this->lblFastTime_2->AutoSize = true;
+			this->lblFastTime_2->Location = System::Drawing::Point(7, 21);
+			this->lblFastTime_2->Name = L"lblFastTime_2";
+			this->lblFastTime_2->Size = System::Drawing::Size(126, 16);
+			this->lblFastTime_2->TabIndex = 0;
+			this->lblFastTime_2->Text = L"Время: 10:45 - 14:00";
+			// 
+			// groupBoxFast_2_3
+			// 
+			this->groupBoxFast_2_3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_2_3->Controls->Add(this->radioButtonFast_2_8);
+			this->groupBoxFast_2_3->Controls->Add(this->radioButtonFast_2_7);
+			this->groupBoxFast_2_3->Controls->Add(this->radioButtonFast_2_6);
+			this->groupBoxFast_2_3->Controls->Add(this->radioButtonFast_2_5);
+			this->groupBoxFast_2_3->Location = System::Drawing::Point(247, 0);
+			this->groupBoxFast_2_3->Name = L"groupBoxFast_2_3";
+			this->groupBoxFast_2_3->Size = System::Drawing::Size(126, 97);
+			this->groupBoxFast_2_3->TabIndex = 9;
+			this->groupBoxFast_2_3->TabStop = false;
+			this->groupBoxFast_2_3->Text = L"Кол-во человек:";
+			// 
+			// radioButtonFast_2_8
+			// 
+			this->radioButtonFast_2_8->AutoSize = true;
+			this->radioButtonFast_2_8->Location = System::Drawing::Point(8, 72);
+			this->radioButtonFast_2_8->Name = L"radioButtonFast_2_8";
+			this->radioButtonFast_2_8->Size = System::Drawing::Size(77, 20);
+			this->radioButtonFast_2_8->TabIndex = 9;
+			this->radioButtonFast_2_8->TabStop = true;
+			this->radioButtonFast_2_8->Text = L"Четыре";
+			this->radioButtonFast_2_8->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_2_7
+			// 
+			this->radioButtonFast_2_7->AutoSize = true;
+			this->radioButtonFast_2_7->Location = System::Drawing::Point(8, 54);
+			this->radioButtonFast_2_7->Name = L"radioButtonFast_2_7";
+			this->radioButtonFast_2_7->Size = System::Drawing::Size(53, 20);
+			this->radioButtonFast_2_7->TabIndex = 8;
+			this->radioButtonFast_2_7->TabStop = true;
+			this->radioButtonFast_2_7->Text = L"Три";
+			this->radioButtonFast_2_7->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_2_6
+			// 
+			this->radioButtonFast_2_6->AutoSize = true;
+			this->radioButtonFast_2_6->Location = System::Drawing::Point(8, 36);
+			this->radioButtonFast_2_6->Name = L"radioButtonFast_2_6";
+			this->radioButtonFast_2_6->Size = System::Drawing::Size(53, 20);
+			this->radioButtonFast_2_6->TabIndex = 7;
+			this->radioButtonFast_2_6->TabStop = true;
+			this->radioButtonFast_2_6->Text = L"Два";
+			this->radioButtonFast_2_6->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_2_5
+			// 
+			this->radioButtonFast_2_5->AutoSize = true;
+			this->radioButtonFast_2_5->Checked = true;
+			this->radioButtonFast_2_5->Location = System::Drawing::Point(8, 18);
+			this->radioButtonFast_2_5->Name = L"radioButtonFast_2_5";
+			this->radioButtonFast_2_5->Size = System::Drawing::Size(62, 20);
+			this->radioButtonFast_2_5->TabIndex = 5;
+			this->radioButtonFast_2_5->TabStop = true;
+			this->radioButtonFast_2_5->Text = L"Один";
+			this->radioButtonFast_2_5->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_2_2
+			// 
+			this->groupBoxFast_2_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_2_2->Controls->Add(this->radioButtonFast_2_4);
+			this->groupBoxFast_2_2->Controls->Add(this->radioButtonFast_2_3);
+			this->groupBoxFast_2_2->Location = System::Drawing::Point(125, 0);
+			this->groupBoxFast_2_2->Name = L"groupBoxFast_2_2";
+			this->groupBoxFast_2_2->Size = System::Drawing::Size(114, 97);
+			this->groupBoxFast_2_2->TabIndex = 8;
+			this->groupBoxFast_2_2->TabStop = false;
+			this->groupBoxFast_2_2->Text = L"Тип места:";
+			// 
+			// radioButtonFast_2_4
+			// 
+			this->radioButtonFast_2_4->AutoSize = true;
+			this->radioButtonFast_2_4->Location = System::Drawing::Point(8, 63);
+			this->radioButtonFast_2_4->Name = L"radioButtonFast_2_4";
+			this->radioButtonFast_2_4->Size = System::Drawing::Size(83, 20);
+			this->radioButtonFast_2_4->TabIndex = 7;
+			this->radioButtonFast_2_4->TabStop = true;
+			this->radioButtonFast_2_4->Text = L"Верхнее";
+			this->radioButtonFast_2_4->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_2_3
+			// 
+			this->radioButtonFast_2_3->AutoSize = true;
+			this->radioButtonFast_2_3->Checked = true;
+			this->radioButtonFast_2_3->Location = System::Drawing::Point(8, 27);
+			this->radioButtonFast_2_3->Name = L"radioButtonFast_2_3";
+			this->radioButtonFast_2_3->Size = System::Drawing::Size(79, 20);
+			this->radioButtonFast_2_3->TabIndex = 5;
+			this->radioButtonFast_2_3->TabStop = true;
+			this->radioButtonFast_2_3->Text = L"Нижнее";
+			this->radioButtonFast_2_3->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_2_1
+			// 
+			this->groupBoxFast_2_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_2_1->Controls->Add(this->radioButtonFast_2_2);
+			this->groupBoxFast_2_1->Controls->Add(this->radioButtonFast_2_1);
+			this->groupBoxFast_2_1->Location = System::Drawing::Point(3, 0);
+			this->groupBoxFast_2_1->Name = L"groupBoxFast_2_1";
+			this->groupBoxFast_2_1->Size = System::Drawing::Size(114, 97);
+			this->groupBoxFast_2_1->TabIndex = 7;
+			this->groupBoxFast_2_1->TabStop = false;
+			this->groupBoxFast_2_1->Text = L"Тип вагона:";
+			// 
+			// radioButtonFast_2_2
+			// 
+			this->radioButtonFast_2_2->AutoSize = true;
+			this->radioButtonFast_2_2->Location = System::Drawing::Point(8, 63);
+			this->radioButtonFast_2_2->Name = L"radioButtonFast_2_2";
+			this->radioButtonFast_2_2->Size = System::Drawing::Size(92, 20);
+			this->radioButtonFast_2_2->TabIndex = 7;
+			this->radioButtonFast_2_2->TabStop = true;
+			this->radioButtonFast_2_2->Text = L"Плацкарт";
+			this->radioButtonFast_2_2->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_2_1
+			// 
+			this->radioButtonFast_2_1->AutoSize = true;
+			this->radioButtonFast_2_1->Checked = true;
+			this->radioButtonFast_2_1->Location = System::Drawing::Point(8, 27);
+			this->radioButtonFast_2_1->Name = L"radioButtonFast_2_1";
+			this->radioButtonFast_2_1->Size = System::Drawing::Size(60, 20);
+			this->radioButtonFast_2_1->TabIndex = 5;
+			this->radioButtonFast_2_1->TabStop = true;
+			this->radioButtonFast_2_1->Text = L"Купе";
+			this->radioButtonFast_2_1->UseVisualStyleBackColor = true;
+			// 
+			// FastButton_2_2
+			// 
+			this->FastButton_2_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->FastButton_2_2->BackColor = System::Drawing::Color::Gold;
+			this->FastButton_2_2->FlatAppearance->BorderSize = 0;
+			this->FastButton_2_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->FastButton_2_2->Location = System::Drawing::Point(517, 0);
+			this->FastButton_2_2->Name = L"FastButton_2_2";
+			this->FastButton_2_2->Size = System::Drawing::Size(112, 41);
+			this->FastButton_2_2->TabIndex = 3;
+			this->FastButton_2_2->Text = L"Заказать";
+			this->FastButton_2_2->UseVisualStyleBackColor = false;
+			// 
+			// FastButton_2_1
+			// 
+			this->FastButton_2_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->FastButton_2_1->BackColor = System::Drawing::Color::MediumAquamarine;
+			this->FastButton_2_1->FlatAppearance->BorderSize = 0;
+			this->FastButton_2_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->FastButton_2_1->Location = System::Drawing::Point(517, 41);
+			this->FastButton_2_1->Name = L"FastButton_2_1";
+			this->FastButton_2_1->Size = System::Drawing::Size(112, 40);
+			this->FastButton_2_1->TabIndex = 2;
+			this->FastButton_2_1->Text = L"Купить";
+			this->FastButton_2_1->UseVisualStyleBackColor = false;
+			// 
+			// dateTimePickerFast_2
+			// 
+			this->dateTimePickerFast_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->dateTimePickerFast_2->CalendarTitleForeColor = System::Drawing::Color::White;
+			this->dateTimePickerFast_2->Location = System::Drawing::Point(517, 81);
+			this->dateTimePickerFast_2->Name = L"dateTimePickerFast_2";
+			this->dateTimePickerFast_2->Size = System::Drawing::Size(112, 22);
+			this->dateTimePickerFast_2->TabIndex = 1;
+			// 
+			// dateTimePicker8
+			// 
+			this->dateTimePicker8->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker8->Name = L"dateTimePicker8";
+			this->dateTimePicker8->Size = System::Drawing::Size(142, 22);
+			this->dateTimePicker8->TabIndex = 0;
+			// 
+			// dateTimePicker5
+			// 
+			this->dateTimePicker5->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker5->Name = L"dateTimePicker5";
+			this->dateTimePicker5->Size = System::Drawing::Size(142, 22);
+			this->dateTimePicker5->TabIndex = 0;
+			// 
+			// dateTimePickerFast_3
+			// 
+			this->dateTimePickerFast_3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->dateTimePickerFast_3->CalendarTitleForeColor = System::Drawing::Color::White;
+			this->dateTimePickerFast_3->Location = System::Drawing::Point(517, 81);
+			this->dateTimePickerFast_3->Name = L"dateTimePickerFast_3";
+			this->dateTimePickerFast_3->Size = System::Drawing::Size(112, 22);
+			this->dateTimePickerFast_3->TabIndex = 1;
+			// 
+			// FastButton_3_1
+			// 
+			this->FastButton_3_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->FastButton_3_1->BackColor = System::Drawing::Color::MediumAquamarine;
+			this->FastButton_3_1->FlatAppearance->BorderSize = 0;
+			this->FastButton_3_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->FastButton_3_1->Location = System::Drawing::Point(517, 41);
+			this->FastButton_3_1->Name = L"FastButton_3_1";
+			this->FastButton_3_1->Size = System::Drawing::Size(112, 40);
+			this->FastButton_3_1->TabIndex = 2;
+			this->FastButton_3_1->Text = L"Купить";
+			this->FastButton_3_1->UseVisualStyleBackColor = false;
+			// 
+			// FastButton_3_2
+			// 
+			this->FastButton_3_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->FastButton_3_2->BackColor = System::Drawing::Color::Gold;
+			this->FastButton_3_2->FlatAppearance->BorderSize = 0;
+			this->FastButton_3_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->FastButton_3_2->Location = System::Drawing::Point(517, 0);
+			this->FastButton_3_2->Name = L"FastButton_3_2";
+			this->FastButton_3_2->Size = System::Drawing::Size(112, 41);
+			this->FastButton_3_2->TabIndex = 3;
+			this->FastButton_3_2->Text = L"Заказать";
+			this->FastButton_3_2->UseVisualStyleBackColor = false;
+			// 
+			// groupBoxFast_3_1
+			// 
+			this->groupBoxFast_3_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_3_1->Controls->Add(this->radioButtonFast_3_2);
+			this->groupBoxFast_3_1->Controls->Add(this->radioButtonFast_3_1);
+			this->groupBoxFast_3_1->Location = System::Drawing::Point(3, 0);
+			this->groupBoxFast_3_1->Name = L"groupBoxFast_3_1";
+			this->groupBoxFast_3_1->Size = System::Drawing::Size(114, 97);
+			this->groupBoxFast_3_1->TabIndex = 7;
+			this->groupBoxFast_3_1->TabStop = false;
+			this->groupBoxFast_3_1->Text = L"Тип вагона:";
+			// 
+			// radioButtonFast_3_1
+			// 
+			this->radioButtonFast_3_1->AutoSize = true;
+			this->radioButtonFast_3_1->Checked = true;
+			this->radioButtonFast_3_1->Location = System::Drawing::Point(8, 27);
+			this->radioButtonFast_3_1->Name = L"radioButtonFast_3_1";
+			this->radioButtonFast_3_1->Size = System::Drawing::Size(60, 20);
+			this->radioButtonFast_3_1->TabIndex = 5;
+			this->radioButtonFast_3_1->TabStop = true;
+			this->radioButtonFast_3_1->Text = L"Купе";
+			this->radioButtonFast_3_1->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_3_2
+			// 
+			this->radioButtonFast_3_2->AutoSize = true;
+			this->radioButtonFast_3_2->Location = System::Drawing::Point(8, 63);
+			this->radioButtonFast_3_2->Name = L"radioButtonFast_3_2";
+			this->radioButtonFast_3_2->Size = System::Drawing::Size(92, 20);
+			this->radioButtonFast_3_2->TabIndex = 7;
+			this->radioButtonFast_3_2->TabStop = true;
+			this->radioButtonFast_3_2->Text = L"Плацкарт";
+			this->radioButtonFast_3_2->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_3_2
+			// 
+			this->groupBoxFast_3_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_3_2->Controls->Add(this->radioButtonFast_3_4);
+			this->groupBoxFast_3_2->Controls->Add(this->radioButtonFast_3_3);
+			this->groupBoxFast_3_2->Location = System::Drawing::Point(125, 0);
+			this->groupBoxFast_3_2->Name = L"groupBoxFast_3_2";
+			this->groupBoxFast_3_2->Size = System::Drawing::Size(114, 97);
+			this->groupBoxFast_3_2->TabIndex = 8;
+			this->groupBoxFast_3_2->TabStop = false;
+			this->groupBoxFast_3_2->Text = L"Тип места:";
+			// 
+			// radioButtonFast_3_3
+			// 
+			this->radioButtonFast_3_3->AutoSize = true;
+			this->radioButtonFast_3_3->Checked = true;
+			this->radioButtonFast_3_3->Location = System::Drawing::Point(8, 27);
+			this->radioButtonFast_3_3->Name = L"radioButtonFast_3_3";
+			this->radioButtonFast_3_3->Size = System::Drawing::Size(79, 20);
+			this->radioButtonFast_3_3->TabIndex = 5;
+			this->radioButtonFast_3_3->TabStop = true;
+			this->radioButtonFast_3_3->Text = L"Нижнее";
+			this->radioButtonFast_3_3->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_3_4
+			// 
+			this->radioButtonFast_3_4->AutoSize = true;
+			this->radioButtonFast_3_4->Location = System::Drawing::Point(8, 63);
+			this->radioButtonFast_3_4->Name = L"radioButtonFast_3_4";
+			this->radioButtonFast_3_4->Size = System::Drawing::Size(83, 20);
+			this->radioButtonFast_3_4->TabIndex = 7;
+			this->radioButtonFast_3_4->TabStop = true;
+			this->radioButtonFast_3_4->Text = L"Верхнее";
+			this->radioButtonFast_3_4->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_3_3
+			// 
+			this->groupBoxFast_3_3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_3_3->Controls->Add(this->radioButtonFast_3_8);
+			this->groupBoxFast_3_3->Controls->Add(this->radioButtonFast_3_7);
+			this->groupBoxFast_3_3->Controls->Add(this->radioButtonFast_3_6);
+			this->groupBoxFast_3_3->Controls->Add(this->radioButtonFast_3_5);
+			this->groupBoxFast_3_3->Location = System::Drawing::Point(247, 0);
+			this->groupBoxFast_3_3->Name = L"groupBoxFast_3_3";
+			this->groupBoxFast_3_3->Size = System::Drawing::Size(126, 97);
+			this->groupBoxFast_3_3->TabIndex = 9;
+			this->groupBoxFast_3_3->TabStop = false;
+			this->groupBoxFast_3_3->Text = L"Кол-во человек:";
+			// 
+			// radioButtonFast_3_5
+			// 
+			this->radioButtonFast_3_5->AutoSize = true;
+			this->radioButtonFast_3_5->Checked = true;
+			this->radioButtonFast_3_5->Location = System::Drawing::Point(8, 18);
+			this->radioButtonFast_3_5->Name = L"radioButtonFast_3_5";
+			this->radioButtonFast_3_5->Size = System::Drawing::Size(62, 20);
+			this->radioButtonFast_3_5->TabIndex = 5;
+			this->radioButtonFast_3_5->TabStop = true;
+			this->radioButtonFast_3_5->Text = L"Один";
+			this->radioButtonFast_3_5->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_3_6
+			// 
+			this->radioButtonFast_3_6->AutoSize = true;
+			this->radioButtonFast_3_6->Location = System::Drawing::Point(8, 36);
+			this->radioButtonFast_3_6->Name = L"radioButtonFast_3_6";
+			this->radioButtonFast_3_6->Size = System::Drawing::Size(53, 20);
+			this->radioButtonFast_3_6->TabIndex = 7;
+			this->radioButtonFast_3_6->TabStop = true;
+			this->radioButtonFast_3_6->Text = L"Два";
+			this->radioButtonFast_3_6->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_3_7
+			// 
+			this->radioButtonFast_3_7->AutoSize = true;
+			this->radioButtonFast_3_7->Location = System::Drawing::Point(8, 54);
+			this->radioButtonFast_3_7->Name = L"radioButtonFast_3_7";
+			this->radioButtonFast_3_7->Size = System::Drawing::Size(53, 20);
+			this->radioButtonFast_3_7->TabIndex = 8;
+			this->radioButtonFast_3_7->TabStop = true;
+			this->radioButtonFast_3_7->Text = L"Три";
+			this->radioButtonFast_3_7->UseVisualStyleBackColor = true;
+			// 
+			// radioButtonFast_3_8
+			// 
+			this->radioButtonFast_3_8->AutoSize = true;
+			this->radioButtonFast_3_8->Location = System::Drawing::Point(8, 72);
+			this->radioButtonFast_3_8->Name = L"radioButtonFast_3_8";
+			this->radioButtonFast_3_8->Size = System::Drawing::Size(77, 20);
+			this->radioButtonFast_3_8->TabIndex = 9;
+			this->radioButtonFast_3_8->TabStop = true;
+			this->radioButtonFast_3_8->Text = L"Четыре";
+			this->radioButtonFast_3_8->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxFast_3_4
+			// 
+			this->groupBoxFast_3_4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBoxFast_3_4->Controls->Add(this->lblFastCount_3);
+			this->groupBoxFast_3_4->Controls->Add(this->lblFastPrice_3);
+			this->groupBoxFast_3_4->Controls->Add(this->lblFastTrip_3);
+			this->groupBoxFast_3_4->Controls->Add(this->lblFastTime_3);
+			this->groupBoxFast_3_4->Location = System::Drawing::Point(381, 0);
+			this->groupBoxFast_3_4->Name = L"groupBoxFast_3_4";
+			this->groupBoxFast_3_4->Size = System::Drawing::Size(130, 97);
+			this->groupBoxFast_3_4->TabIndex = 10;
+			this->groupBoxFast_3_4->TabStop = false;
+			this->groupBoxFast_3_4->Text = L"Информация:";
+			// 
+			// lblFastTime_3
+			// 
+			this->lblFastTime_3->AutoSize = true;
+			this->lblFastTime_3->Location = System::Drawing::Point(7, 21);
+			this->lblFastTime_3->Name = L"lblFastTime_3";
+			this->lblFastTime_3->Size = System::Drawing::Size(126, 16);
+			this->lblFastTime_3->TabIndex = 0;
+			this->lblFastTime_3->Text = L"Время: 14:10 - 18:20";
+			// 
+			// lblFastTrip_3
+			// 
+			this->lblFastTrip_3->AutoSize = true;
+			this->lblFastTrip_3->Location = System::Drawing::Point(7, 57);
+			this->lblFastTrip_3->Name = L"lblFastTrip_3";
+			this->lblFastTrip_3->Size = System::Drawing::Size(124, 16);
+			this->lblFastTrip_3->TabIndex = 1;
+			this->lblFastTrip_3->Text = L"Путь: НН - Москва";
+			// 
+			// lblFastPrice_3
+			// 
+			this->lblFastPrice_3->AutoSize = true;
+			this->lblFastPrice_3->Location = System::Drawing::Point(7, 74);
+			this->lblFastPrice_3->Name = L"lblFastPrice_3";
+			this->lblFastPrice_3->Size = System::Drawing::Size(83, 16);
+			this->lblFastPrice_3->TabIndex = 2;
+			this->lblFastPrice_3->Text = L"Стоимость: ";
+			// 
+			// lblFastCount_3
+			// 
+			this->lblFastCount_3->AutoSize = true;
+			this->lblFastCount_3->Location = System::Drawing::Point(7, 39);
+			this->lblFastCount_3->Name = L"lblFastCount_3";
+			this->lblFastCount_3->Size = System::Drawing::Size(46, 16);
+			this->lblFastCount_3->TabIndex = 3;
+			this->lblFastCount_3->Text = L"Мест: ";
+			// 
+			// activePanelFast_3
+			// 
+			this->activePanelFast_3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->activePanelFast_3->BackColor = System::Drawing::Color::Azure;
+			this->activePanelFast_3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->activePanelFast_3->Controls->Add(this->groupBoxFast_3_4);
+			this->activePanelFast_3->Controls->Add(this->groupBoxFast_3_3);
+			this->activePanelFast_3->Controls->Add(this->groupBoxFast_3_2);
+			this->activePanelFast_3->Controls->Add(this->groupBoxFast_3_1);
+			this->activePanelFast_3->Controls->Add(this->FastButton_3_2);
+			this->activePanelFast_3->Controls->Add(this->FastButton_3_1);
+			this->activePanelFast_3->Controls->Add(this->dateTimePickerFast_3);
+			this->activePanelFast_3->Controls->Add(this->dateTimePicker5);
+			this->activePanelFast_3->Location = System::Drawing::Point(15, 250);
+			this->activePanelFast_3->Name = L"activePanelFast_3";
+			this->activePanelFast_3->Size = System::Drawing::Size(631, 100);
+			this->activePanelFast_3->TabIndex = 12;
 			// 
 			// MyForm
 			// 
@@ -597,10 +1558,37 @@ namespace Task5Railway {
 			this->panelLogo->PerformLayout();
 			this->panelTitleBar->ResumeLayout(false);
 			this->panelTitleBar->PerformLayout();
+			this->panel1->ResumeLayout(false);
 			this->panelDesktopPanel->ResumeLayout(false);
 			this->panelFaster->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxWellcome))->EndInit();
 			this->activePanelFast_1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxWellcome))->EndInit();
+			this->groupBoxFast_1_1->ResumeLayout(false);
+			this->groupBoxFast_1_1->PerformLayout();
+			this->groupBoxFast_1_2->ResumeLayout(false);
+			this->groupBoxFast_1_2->PerformLayout();
+			this->groupBoxFast_1_3->ResumeLayout(false);
+			this->groupBoxFast_1_3->PerformLayout();
+			this->groupBoxFast_1_4->ResumeLayout(false);
+			this->groupBoxFast_1_4->PerformLayout();
+			this->activePanelFast_2->ResumeLayout(false);
+			this->groupBoxFast_2_4->ResumeLayout(false);
+			this->groupBoxFast_2_4->PerformLayout();
+			this->groupBoxFast_2_3->ResumeLayout(false);
+			this->groupBoxFast_2_3->PerformLayout();
+			this->groupBoxFast_2_2->ResumeLayout(false);
+			this->groupBoxFast_2_2->PerformLayout();
+			this->groupBoxFast_2_1->ResumeLayout(false);
+			this->groupBoxFast_2_1->PerformLayout();
+			this->groupBoxFast_3_1->ResumeLayout(false);
+			this->groupBoxFast_3_1->PerformLayout();
+			this->groupBoxFast_3_2->ResumeLayout(false);
+			this->groupBoxFast_3_2->PerformLayout();
+			this->groupBoxFast_3_3->ResumeLayout(false);
+			this->groupBoxFast_3_3->PerformLayout();
+			this->groupBoxFast_3_4->ResumeLayout(false);
+			this->groupBoxFast_3_4->PerformLayout();
+			this->activePanelFast_3->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -677,6 +1665,8 @@ namespace Task5Railway {
 			back = true;
 			lblTitle->Text = "Wellcome";
 		}
+private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
 
