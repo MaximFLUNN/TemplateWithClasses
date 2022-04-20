@@ -127,6 +127,7 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Orderedclass.h" />
     <ClInclude Include="ThemeColor.h" />
   </ItemGroup>
   <ItemGroup>
