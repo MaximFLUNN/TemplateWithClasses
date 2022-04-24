@@ -14,15 +14,20 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class OrderedPanel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Panel
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Methods:
-    CreateMyOrderedPanel(Panel, Int32, Int32, Int32, Int32, GroupBox, Label, GroupBox, Label, GroupBox, Label, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker): PrivateScope, Public, HideBySig
+Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
 Class Task5Railway.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
+    System.Windows.Forms.Button correntButton : Public
+    Int32 tempIndex : Public
+    Int32 xmove : Public
+    Int32 countOrdered : Public
+    Int32 index : Public
+    Boolean back : Public
+    Int32 Y : Public
+    cliext.vector<System::Windows::Forms::Panel ^> pnlsOrdered IsByValue : Public, InitOnly
     System.Windows.Forms.Panel panelCloseBar : Public
     System.Windows.Forms.PictureBox pictureBoxWellcome : Public
     System.Windows.Forms.Panel panelFaster : Public
@@ -57,5 +62,8 @@ Class Task5Railway.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Windows.Forms.Panel panelOrdered : Public
     Int32 ymove : Public
   Methods:
-    newOrdered(RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, GroupBox, GroupBox, GroupBox, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32): PrivateScope, Public, HideBySig
+    newOrdered(Object, EventArgs, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, RadioButton, GroupBox, GroupBox, GroupBox, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32): PrivateScope, Public, HideBySig
     InitializeComponent(): PrivateScope, Public, HideBySig
+    GetArray(vector<System::Windows::Forms::Panel ^>&): PrivateScope, Public, HideBySig
+    CreateMyOrderedPanel(Panel, Int32, Int32, Int32, Int32, GroupBox, Label, GroupBox, Label, GroupBox, Label, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32, vector<System::Windows::Forms::Panel ^> IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    OnClick(Object, EventArgs): PrivateScope, Public, HideBySig

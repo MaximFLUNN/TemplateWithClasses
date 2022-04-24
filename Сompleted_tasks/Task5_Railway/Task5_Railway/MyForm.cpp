@@ -11,3 +11,4 @@ void main(array<String^>^ args) {
 	Task5Railway::MyForm form;
 	Application::Run(% form);
 }
+

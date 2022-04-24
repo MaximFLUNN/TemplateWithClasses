@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "ThemeColor.h"
 #include "Orderedclass.h"
-
 namespace Task5Railway {
 	using namespace System;
 	using namespace System::IO;
@@ -14,6 +13,7 @@ namespace Task5Railway {
 	/// <summary>
 	/// Сводка для MyForm
 	/// </summary>
+
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 		//Fields
@@ -22,13 +22,16 @@ namespace Task5Railway {
 
 		[DllImport("user32.DLL", EntryPoint = "SendMessage")]
 		void SendMessage(System::IntPtr hWnd, int wMsg, int wParam, int lParam);*/
-	private: 
+	public:
 		Button^ correntButton;
 		//Random random;
 		int tempIndex;
 		int xmove = 0;
 		int countOrdered = 0;
+		int index = 0;
 		bool back = false;
+		int Y;
+		cliext::vector<Panel^> pnlsOrdered;
 	public: System::Windows::Forms::Panel^ panelCloseBar;
 	public: System::Windows::Forms::PictureBox^ pictureBoxWellcome;
 	public: System::Windows::Forms::Panel^ panelFaster;
@@ -147,65 +150,9 @@ private: System::Windows::Forms::DateTimePicker^ dateTimePickerFast_2;
 	public: System::Windows::Forms::DateTimePicker^ dateTimePicker8;
 public: System::Windows::Forms::Panel^ panelOrdered;
 
+public:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public:
 		   int ymove = 0;
 		//constructor
 	public:
@@ -338,6 +285,7 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			pictureBoxWellcome->Visible = true;
 			panelFaster->Visible = false;
 			panelOrdered->Visible = false;
+			panelOrdered->AutoScroll = false;
 		}
 		Color ChangeColorBrightness(Color color, double correctionFactor) {
 			double red = color.R;
@@ -411,7 +359,8 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 		/// </summary>
 		System::ComponentModel::Container ^components;
 	public:
-		void newOrdered(RadioButton^ radioBTN1, RadioButton^ radioBTN2,
+		void newOrdered(System::Object^ sender, System::EventArgs^ e, 
+			RadioButton^ radioBTN1, RadioButton^ radioBTN2,
 			RadioButton^ radioBTN3, RadioButton^ radioBTN4,
 			RadioButton^ radioBTN5, RadioButton^ radioBTN6,
 			RadioButton^ radioBTN7, RadioButton^ radioBTN8,
@@ -449,12 +398,20 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			else if (radioBTN8->Checked == true) {
 				checkedButton3->Text = radioBTN8->Text;
 			}
-			OrderedPanel^ panel = gcnew OrderedPanel();
-			panel->CreateMyOrderedPanel(panelOrdered, 15, 10 + 120 * countOrdered, 631, 100, _panelGB1, checkedButton1,
+			Panel^ panel = gcnew Panel();
+			Y = panelDesktopPanel->System::Windows::Forms::Panel::Control::Width;
+			panel = CreateMyOrderedPanel(panelOrdered, 15, 10 + 120 * countOrdered, Y - 32, 100, _panelGB1, checkedButton1, //631
 				_panelGB2, checkedButton2, _panelGB3, checkedButton3, _panelGB4,
-				info1, info2, info3, info4, btn2, btn1, dtp);
-			//countOrdered++;
+				info1, info2, info3, info4, btn2, btn1, dtp, index, pnlsOrdered);//, ClickDelButton);
+			//pnlsOrdered.push_back(panel);
+			//panel->AddEVH();
 		}
+		
+		/*System::Void ClickDelButton(System::Object^ sender, System::EventArgs^ e) {
+			pnlsOrdered[0]->Del(panelOrdered);
+			pnlsOrdered.erase(pnlsOrdered.begin());
+		}*/
+		
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Требуемый метод для поддержки конструктора — не изменяйте 
@@ -835,9 +792,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			// panelDesktopPanel
 			// 
-			this->panelDesktopPanel->Controls->Add(this->panelOrdered);
 			this->panelDesktopPanel->Controls->Add(this->panelFaster);
 			this->panelDesktopPanel->Controls->Add(this->pictureBoxWellcome);
+			this->panelDesktopPanel->Controls->Add(this->panelOrdered);
 			this->panelDesktopPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panelDesktopPanel->Location = System::Drawing::Point(219, 80);
 			this->panelDesktopPanel->Name = L"panelDesktopPanel";
@@ -879,15 +836,13 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			// groupBoxFast_3_4
 			// 
-			this->groupBoxFast_3_4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBoxFast_3_4->Controls->Add(this->lblFastCount_3);
 			this->groupBoxFast_3_4->Controls->Add(this->lblFastPrice_3);
 			this->groupBoxFast_3_4->Controls->Add(this->lblFastTrip_3);
 			this->groupBoxFast_3_4->Controls->Add(this->lblFastTime_3);
 			this->groupBoxFast_3_4->Location = System::Drawing::Point(381, 0);
 			this->groupBoxFast_3_4->Name = L"groupBoxFast_3_4";
-			this->groupBoxFast_3_4->Size = System::Drawing::Size(130, 97);
+			this->groupBoxFast_3_4->Size = System::Drawing::Size(120, 97);
 			this->groupBoxFast_3_4->TabIndex = 10;
 			this->groupBoxFast_3_4->TabStop = false;
 			this->groupBoxFast_3_4->Text = L"Информация:";
@@ -1060,9 +1015,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			this->FastButton_3_2->BackColor = System::Drawing::Color::Gold;
 			this->FastButton_3_2->FlatAppearance->BorderSize = 0;
 			this->FastButton_3_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->FastButton_3_2->Location = System::Drawing::Point(517, 0);
+			this->FastButton_3_2->Location = System::Drawing::Point(523, 0);
 			this->FastButton_3_2->Name = L"FastButton_3_2";
-			this->FastButton_3_2->Size = System::Drawing::Size(112, 41);
+			this->FastButton_3_2->Size = System::Drawing::Size(106, 41);
 			this->FastButton_3_2->TabIndex = 3;
 			this->FastButton_3_2->Text = L"Заказать";
 			this->FastButton_3_2->UseVisualStyleBackColor = false;
@@ -1073,9 +1028,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			this->FastButton_3_1->BackColor = System::Drawing::Color::MediumAquamarine;
 			this->FastButton_3_1->FlatAppearance->BorderSize = 0;
 			this->FastButton_3_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->FastButton_3_1->Location = System::Drawing::Point(517, 41);
+			this->FastButton_3_1->Location = System::Drawing::Point(524, 41);
 			this->FastButton_3_1->Name = L"FastButton_3_1";
-			this->FastButton_3_1->Size = System::Drawing::Size(112, 40);
+			this->FastButton_3_1->Size = System::Drawing::Size(105, 40);
 			this->FastButton_3_1->TabIndex = 2;
 			this->FastButton_3_1->Text = L"Купить";
 			this->FastButton_3_1->UseVisualStyleBackColor = false;
@@ -1084,9 +1039,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			this->dateTimePickerFast_3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->dateTimePickerFast_3->CalendarTitleForeColor = System::Drawing::Color::White;
-			this->dateTimePickerFast_3->Location = System::Drawing::Point(517, 81);
+			this->dateTimePickerFast_3->Location = System::Drawing::Point(524, 80);
 			this->dateTimePickerFast_3->Name = L"dateTimePickerFast_3";
-			this->dateTimePickerFast_3->Size = System::Drawing::Size(112, 19);
+			this->dateTimePickerFast_3->Size = System::Drawing::Size(106, 19);
 			this->dateTimePickerFast_3->TabIndex = 1;
 			// 
 			// dateTimePicker5
@@ -1117,15 +1072,13 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			// groupBoxFast_2_4
 			// 
-			this->groupBoxFast_2_4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBoxFast_2_4->Controls->Add(this->lblFastCount_2);
 			this->groupBoxFast_2_4->Controls->Add(this->lblFastPrice_2);
 			this->groupBoxFast_2_4->Controls->Add(this->lblFastTrip_2);
 			this->groupBoxFast_2_4->Controls->Add(this->lblFastTime_2);
 			this->groupBoxFast_2_4->Location = System::Drawing::Point(381, 0);
 			this->groupBoxFast_2_4->Name = L"groupBoxFast_2_4";
-			this->groupBoxFast_2_4->Size = System::Drawing::Size(130, 97);
+			this->groupBoxFast_2_4->Size = System::Drawing::Size(120, 97);
 			this->groupBoxFast_2_4->TabIndex = 10;
 			this->groupBoxFast_2_4->TabStop = false;
 			this->groupBoxFast_2_4->Text = L"Информация:";
@@ -1298,9 +1251,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			this->FastButton_2_2->BackColor = System::Drawing::Color::Gold;
 			this->FastButton_2_2->FlatAppearance->BorderSize = 0;
 			this->FastButton_2_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->FastButton_2_2->Location = System::Drawing::Point(517, 0);
+			this->FastButton_2_2->Location = System::Drawing::Point(524, 0);
 			this->FastButton_2_2->Name = L"FastButton_2_2";
-			this->FastButton_2_2->Size = System::Drawing::Size(112, 41);
+			this->FastButton_2_2->Size = System::Drawing::Size(105, 41);
 			this->FastButton_2_2->TabIndex = 3;
 			this->FastButton_2_2->Text = L"Заказать";
 			this->FastButton_2_2->UseVisualStyleBackColor = false;
@@ -1311,9 +1264,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			this->FastButton_2_1->BackColor = System::Drawing::Color::MediumAquamarine;
 			this->FastButton_2_1->FlatAppearance->BorderSize = 0;
 			this->FastButton_2_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->FastButton_2_1->Location = System::Drawing::Point(517, 41);
+			this->FastButton_2_1->Location = System::Drawing::Point(524, 41);
 			this->FastButton_2_1->Name = L"FastButton_2_1";
-			this->FastButton_2_1->Size = System::Drawing::Size(112, 40);
+			this->FastButton_2_1->Size = System::Drawing::Size(105, 40);
 			this->FastButton_2_1->TabIndex = 2;
 			this->FastButton_2_1->Text = L"Купить";
 			this->FastButton_2_1->UseVisualStyleBackColor = false;
@@ -1322,9 +1275,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			this->dateTimePickerFast_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->dateTimePickerFast_2->CalendarTitleForeColor = System::Drawing::Color::White;
-			this->dateTimePickerFast_2->Location = System::Drawing::Point(517, 81);
+			this->dateTimePickerFast_2->Location = System::Drawing::Point(524, 81);
 			this->dateTimePickerFast_2->Name = L"dateTimePickerFast_2";
-			this->dateTimePickerFast_2->Size = System::Drawing::Size(112, 19);
+			this->dateTimePickerFast_2->Size = System::Drawing::Size(106, 19);
 			this->dateTimePickerFast_2->TabIndex = 1;
 			// 
 			// dateTimePicker8
@@ -1355,15 +1308,13 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			// groupBoxFast_1_4
 			// 
-			this->groupBoxFast_1_4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBoxFast_1_4->Controls->Add(this->lblFastCount_1);
 			this->groupBoxFast_1_4->Controls->Add(this->lblFastPrice_1);
 			this->groupBoxFast_1_4->Controls->Add(this->lblFastTrip_1);
 			this->groupBoxFast_1_4->Controls->Add(this->lblFastTime_1);
 			this->groupBoxFast_1_4->Location = System::Drawing::Point(381, 0);
 			this->groupBoxFast_1_4->Name = L"groupBoxFast_1_4";
-			this->groupBoxFast_1_4->Size = System::Drawing::Size(130, 97);
+			this->groupBoxFast_1_4->Size = System::Drawing::Size(120, 97);
 			this->groupBoxFast_1_4->TabIndex = 10;
 			this->groupBoxFast_1_4->TabStop = false;
 			this->groupBoxFast_1_4->Text = L"Информация:";
@@ -1537,9 +1488,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			this->FastButton_1_2->BackColor = System::Drawing::Color::Gold;
 			this->FastButton_1_2->FlatAppearance->BorderSize = 0;
 			this->FastButton_1_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->FastButton_1_2->Location = System::Drawing::Point(517, 0);
+			this->FastButton_1_2->Location = System::Drawing::Point(524, 0);
 			this->FastButton_1_2->Name = L"FastButton_1_2";
-			this->FastButton_1_2->Size = System::Drawing::Size(112, 41);
+			this->FastButton_1_2->Size = System::Drawing::Size(105, 41);
 			this->FastButton_1_2->TabIndex = 3;
 			this->FastButton_1_2->Text = L"Заказать";
 			this->FastButton_1_2->UseVisualStyleBackColor = false;
@@ -1551,9 +1502,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			this->FastButton_1_1->BackColor = System::Drawing::Color::MediumAquamarine;
 			this->FastButton_1_1->FlatAppearance->BorderSize = 0;
 			this->FastButton_1_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->FastButton_1_1->Location = System::Drawing::Point(517, 41);
+			this->FastButton_1_1->Location = System::Drawing::Point(524, 41);
 			this->FastButton_1_1->Name = L"FastButton_1_1";
-			this->FastButton_1_1->Size = System::Drawing::Size(112, 40);
+			this->FastButton_1_1->Size = System::Drawing::Size(105, 40);
 			this->FastButton_1_1->TabIndex = 2;
 			this->FastButton_1_1->Text = L"Купить";
 			this->FastButton_1_1->UseVisualStyleBackColor = false;
@@ -1562,9 +1513,9 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			this->dateTimePickerFast_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->dateTimePickerFast_1->CalendarTitleForeColor = System::Drawing::Color::White;
-			this->dateTimePickerFast_1->Location = System::Drawing::Point(517, 81);
+			this->dateTimePickerFast_1->Location = System::Drawing::Point(524, 81);
 			this->dateTimePickerFast_1->Name = L"dateTimePickerFast_1";
-			this->dateTimePickerFast_1->Size = System::Drawing::Size(112, 19);
+			this->dateTimePickerFast_1->Size = System::Drawing::Size(106, 19);
 			this->dateTimePickerFast_1->TabIndex = 1;
 			// 
 			// dateTimePicker1
@@ -1588,14 +1539,15 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 			// 
 			// panelOrdered
 			// 
-			this->panelOrdered->AutoScroll = true;
 			this->panelOrdered->BackColor = System::Drawing::Color::LightBlue;
 			this->panelOrdered->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panelOrdered->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->panelOrdered->Location = System::Drawing::Point(0, 0);
 			this->panelOrdered->Name = L"panelOrdered";
 			this->panelOrdered->Size = System::Drawing::Size(661, 360);
 			this->panelOrdered->TabIndex = 2;
 			this->panelOrdered->Visible = false;
+			this->panelOrdered->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panelOrdered_Paint);
 			// 
 			// MyForm
 			// 
@@ -1705,6 +1657,7 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 		private: System::Void btnOrdered_Click(System::Object^ sender, System::EventArgs^ e) {
 			ActivateButton(sender);
 			lblTitle->Text = "Ordered";
+			panelOrdered->AutoScroll = true;
 			panelOrdered->Visible = true;
 		}
 		private: System::Void btnIssued_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1714,6 +1667,8 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 		private: System::Void btnSettings_Click(System::Object^ sender, System::EventArgs^ e) {
 			ActivateButton(sender);
 			lblTitle->Text = "Settings";
+			//pnlsOrdered[0]->Del(panelOrdered);
+			//pnlsOrdered.erase(pnlsOrdered.begin());
 		}
 		private: System::Void panelLogo_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 
@@ -1728,14 +1683,186 @@ public: System::Windows::Forms::Panel^ panelOrdered;
 		private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		}
 		private: System::Void FastButton_1_2_Click(System::Object^ sender, System::EventArgs^ e) {
-			newOrdered(radioButtonFast_1_1, radioButtonFast_1_2, radioButtonFast_1_3, radioButtonFast_1_4,
+			newOrdered(sender, e, radioButtonFast_1_1, radioButtonFast_1_2, radioButtonFast_1_3, radioButtonFast_1_4,
 				radioButtonFast_1_5, radioButtonFast_1_6, radioButtonFast_1_7, radioButtonFast_1_8,
 				groupBoxFast_1_1, groupBoxFast_1_2, groupBoxFast_1_3, groupBoxFast_1_4, 
 				lblFastTime_1, lblFastCount_1, lblFastTrip_1, lblFastPrice_1,
 				FastButton_1_1, FastButton_1_2, dateTimePickerFast_1, countOrdered);
 			countOrdered++;
-		}
-};
-		
-}
+			index++;
 
+
+		}
+		public: cliext::vector<Panel^> GetArray() {
+			return pnlsOrdered;
+		}
+////#pragma warning(default:4716)
+//		/*public: System::EventHandler^ ClickDelButton(System::Object^ sender, System::EventArgs^ e) {
+//			pnlsOrdered[0]->Del(panelOrdered);
+//			pnlsOrdered.erase(pnlsOrdered.begin());
+//		}*/
+		private: System::Void panelOrdered_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+		}
+		public:
+			   Panel^ CreateMyOrderedPanel(Panel^ pnl, int x, int y, int w, int h,
+				   GroupBox^ wagonTypeGB, Label^ wagonTypeLBL, GroupBox^ seatTypeGB, Label^ seatTypeLBL,
+				   GroupBox^ countPeopleGB, Label^ countPeopleLBL, GroupBox^ information, Label^ INFO_time,
+				   Label^ INFO_countSeat, Label^ INFO_trip, Label^ INFO_price, Button^ btndelete,
+				   Button^ btnbuy, DateTimePicker^ dtp, int index, cliext::vector<Panel^> %pnls) {//, EventHandler^ evh) {
+
+				   // Panel create
+				   Panel^ _panel = gcnew Panel();
+				   _panel->Location = Point(x, y);
+				   _panel->Size = System::Drawing::Size(w, h);
+				   _panel->BackColor = Color::Azure;
+				   _panel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+				   _panel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left) | System::Windows::Forms::AnchorStyles::Right));
+				   _panel->AutoSizeMode = pnl->AutoSizeMode;
+				   pnl->Controls->Add(_panel);
+
+				   // wagonTypeGB create
+				   GroupBox^ _wagonTypeGB = gcnew GroupBox();
+				   //_wagonTypeGB->Anchor = wagonTypeGB->Anchor;
+				   _wagonTypeGB->Location = wagonTypeGB->Location;
+				   _wagonTypeGB->Size = wagonTypeGB->Size;
+				   _wagonTypeGB->BackColor = wagonTypeGB->BackColor;
+				   _wagonTypeGB->Text = wagonTypeGB->Text;
+				   _panel->Controls->Add(_wagonTypeGB);
+
+				   // wagonTypeLBL create
+				   Label^ _wagonTypeLBL = gcnew Label();
+				   _wagonTypeLBL->Location = Point(8, 44);
+				   _wagonTypeLBL->Text = "Вагон: " + wagonTypeLBL->Text;
+				   _wagonTypeGB->Controls->Add(_wagonTypeLBL);
+
+				   // seatTypeGB create
+				   GroupBox^ _seatTypeGB = gcnew GroupBox();
+				   //_seatTypeGB->Anchor = seatTypeGB->Anchor;
+				   _seatTypeGB->Location = seatTypeGB->Location;
+				   _seatTypeGB->Size = seatTypeGB->Size;
+				   _seatTypeGB->BackColor = seatTypeGB->BackColor;
+				   _seatTypeGB->Text = seatTypeGB->Text;
+				   _panel->Controls->Add(_seatTypeGB);
+
+				   // seatTypeLBL create
+				   Label^ _seatTypeLBL = gcnew Label();
+				   _seatTypeLBL->Location = Point(8, 44);
+				   _seatTypeLBL->Text = "Место: " + seatTypeLBL->Text;
+				   _seatTypeGB->Controls->Add(_seatTypeLBL);
+
+				   // countPeopleGB create
+				   GroupBox^ _countPeopleGB = gcnew GroupBox();
+				   //_countPeopleGB->Anchor = countPeopleGB->Anchor;
+				   _countPeopleGB->Location = countPeopleGB->Location;
+				   _countPeopleGB->Size = countPeopleGB->Size;
+				   _countPeopleGB->BackColor = countPeopleGB->BackColor;
+				   _countPeopleGB->Text = countPeopleGB->Text;
+				   _panel->Controls->Add(_countPeopleGB);
+
+				   // countPeopleLBL create
+				   Label^ _countPeopleLBL = gcnew Label();
+				   _countPeopleLBL->Location = Point(8, 44);
+				   _countPeopleLBL->Text = "Кол-во: " + countPeopleLBL->Text;
+				   _countPeopleGB->Controls->Add(_countPeopleLBL);
+
+				   // information create
+				   GroupBox^ _information = gcnew GroupBox();
+				   _information->Anchor = information->Anchor;
+				   _information->Location = information->Location;
+				   _information->Size = information->Size;
+				   _information->BackColor = information->BackColor;
+				   _information->Text = information->Text;
+				   _panel->Controls->Add(_information);
+
+				   Label^ _INFO_countSeat = gcnew Label();
+				   _INFO_countSeat->AutoSize = true;
+				   _INFO_countSeat->Location = INFO_countSeat->Location;
+				   _INFO_countSeat->Text = INFO_countSeat->Text;
+
+				   Label^ _INFO_time = gcnew Label();
+				   _INFO_time->AutoSize = true;
+				   _INFO_time->Location = INFO_time->Location;
+				   _INFO_time->Text = INFO_time->Text;
+
+				   Label^ _INFO_trip = gcnew Label();
+				   _INFO_trip->AutoSize = true;
+				   _INFO_trip->Location = INFO_trip->Location;
+				   _INFO_trip->Text = INFO_trip->Text;
+
+				   Label^ _INFO_price = gcnew Label();
+				   _INFO_price->AutoSize = true;
+				   _INFO_price->Location = INFO_price->Location;
+				   _INFO_price->Text = INFO_price->Text;
+
+				   _information->Controls->Add(_INFO_countSeat);
+				   _information->Controls->Add(_INFO_time);
+				   _information->Controls->Add(_INFO_trip);
+				   _information->Controls->Add(_INFO_price);
+
+				   // del btn create
+				   Button^ delbtn = gcnew Button();
+				   delbtn->Anchor = btndelete->Anchor;
+				   delbtn->Location = btndelete->Location;
+				   delbtn->Size = btndelete->Size;
+				   delbtn->Text = "Удалить";
+				   delbtn->FlatStyle = btndelete->FlatStyle;
+				   delbtn->FlatAppearance->BorderSize = btndelete->FlatAppearance->BorderSize;
+				   delbtn->BackColor = Color::PaleVioletRed;
+				   //delbtn->Click += evh;
+				   delbtn->Name = "btndel" + index;
+				   delbtn->Click += gcnew System::EventHandler(this, &MyForm::OnClick);
+				   _panel->Controls->Add(delbtn);
+
+				   // buy btn create
+				   Button^ _btnbuy = gcnew Button();
+				   _btnbuy->Anchor = btnbuy->Anchor;
+				   _btnbuy->Location = btnbuy->Location;
+				   _btnbuy->Size = btnbuy->Size;
+				   _btnbuy->Text = btnbuy->Text;
+				   _btnbuy->FlatStyle = btndelete->FlatStyle;
+				   _btnbuy->FlatAppearance->BorderSize = btndelete->FlatAppearance->BorderSize;
+				   _btnbuy->BackColor = btnbuy->BackColor;
+				   _panel->Controls->Add(_btnbuy);
+
+				   // dtp create
+				   DateTimePicker^ _dtp = gcnew DateTimePicker();
+				   _dtp->Anchor = dtp->Anchor;
+				   _dtp->Size = dtp->Size;
+				   _dtp->Location = dtp->Location;
+				   _dtp->Value = dtp->Value;
+				   _dtp->Enabled = false;
+				   _panel->Controls->Add(_dtp);
+
+				   pnlsOrdered.push_back(_panel);
+
+				   return _panel;
+			   }
+			   void OnClick(System::Object^ sender, System::EventArgs^ e);
+			   
+};
+void MyForm::OnClick(System::Object^ sender, System::EventArgs^ e)
+{
+	bool test = false;
+	int index = 0;
+	Button^ newbtn;
+	Panel^ newpnl = (Panel^)(newbtn = (Button^)sender)->Parent;
+	//Panel^ newpnl = (Panel^)(newbtn->Parent);
+	for (int j = 0; j < pnlsOrdered.size() && test != true; j++) { 
+		if (newpnl == pnlsOrdered[j]) {
+		//if (sender->ReferenceEquals(sender, pnlsOrdered[j]->GetChildAtPoint(Point(522, 0)))) {
+			test = true; 
+			index = j;
+		} 
+	}
+	/*if (sender == pnlsOrdered[0]->GetChildAtPoint(Point(522, 0))) {
+		test = true;
+	};*/
+	MessageBox::Show("Del");
+	panelOrdered->Controls->Remove(pnlsOrdered[index]);
+	pnlsOrdered.erase(pnlsOrdered.begin() + index);
+	for (int i = index; i < pnlsOrdered.size(); i++) {
+		pnlsOrdered[i]->Location = Point(pnlsOrdered[i]->Location.X, pnlsOrdered[i]->Location.Y - 120);
+	}
+	countOrdered--;
+}
+}
