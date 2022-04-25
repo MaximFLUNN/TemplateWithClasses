@@ -1,0 +1,8 @@
+﻿  MyForm.cpp
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\MyForm.h(29,37): warning C4677: pnlsOrdered: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<System::Windows::Forms::Panel ^>"
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\MyForm.h(29): message : см. объявление "cliext::vector<System::Windows::Forms::Panel ^>"
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\MyForm.h(415,14): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\MyForm.h(467,1): warning C4965: неявная упаковка целого числа 0; используйте nullptr или явное приведение типов
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\MyForm.cpp(7,33): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Task5Railway_v2.vcxproj -> D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\x64\Debug\Task5Railway_v2.exe
