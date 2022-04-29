@@ -24,10 +24,12 @@ Class Task5Railwayv2.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     Int32 tempIndex : Public
     Int32 xmove : Public
     Int32 countOrdered : Public
+    Int32 countIssueds : Public
     Int32 index : Public
     Boolean back : Public
     Int32 Y : Public
     cliext.vector<System::Windows::Forms::Panel ^> pnlsOrdered IsByValue : Public, InitOnly
+    cliext.vector<System::Windows::Forms::Panel ^> pnlsIssued IsByValue : Public, InitOnly
     System.Windows.Forms.Panel panelCloseBar : Public
     System.Windows.Forms.PictureBox pictureBoxWellcome : Public
     System.Windows.Forms.Panel panelFaster : Public
@@ -63,38 +65,38 @@ Class Task5Railwayv2.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     System.Windows.Forms.Panel panelBranded : Public
     System.Windows.Forms.Panel panel3 : Public
     System.Windows.Forms.GroupBox groupBox4 : Public
-    System.Windows.Forms.RadioButton radioButton7 : Public
-    System.Windows.Forms.RadioButton radioButton8 : Public
-    System.Windows.Forms.RadioButton radioButton27 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded3_3 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded3_2 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded3_1 : Public
     System.Windows.Forms.GroupBox groupBox1 : Public
-    System.Windows.Forms.Label label2 : Public
-    System.Windows.Forms.Label label3 : Public
+    System.Windows.Forms.Label lblBrandedCount_3 : Public
+    System.Windows.Forms.Label lblBrandedPrice_3 : Public
     System.Windows.Forms.GroupBox groupBox8 : Public
-    System.Windows.Forms.RadioButton radioButton15 : Public
-    System.Windows.Forms.RadioButton radioButton16 : Public
-    System.Windows.Forms.RadioButton radioButton26 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded2_3 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded2_2 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded2_1 : Public
     System.Windows.Forms.DateTimePicker dateTimePicker7 : Public
     System.Windows.Forms.Panel panel5 : Public
     System.Windows.Forms.GroupBox groupBox9 : Public
-    System.Windows.Forms.Label label10 : Public
-    System.Windows.Forms.Label label11 : Public
-    System.Windows.Forms.Label label12 : Public
-    System.Windows.Forms.Label label13 : Public
+    System.Windows.Forms.Label lblBrandedCount_1 : Public
+    System.Windows.Forms.Label lblBrandedPrice_1 : Public
+    System.Windows.Forms.Label lblBrandedTrip_1 : Public
+    System.Windows.Forms.Label lblBrandedTime_1 : Public
     System.Windows.Forms.GroupBox groupBox10 : Public
-    System.Windows.Forms.RadioButton radioButton17 : Public
-    System.Windows.Forms.RadioButton radioButton18 : Public
-    System.Windows.Forms.RadioButton radioButton19 : Public
-    System.Windows.Forms.RadioButton radioButton20 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_9 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_8 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_7 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_6 : Public
     System.Windows.Forms.GroupBox groupBox11 : Public
-    System.Windows.Forms.RadioButton radioButton21 : Public
-    System.Windows.Forms.RadioButton radioButton22 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_5 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_4 : Public
     System.Windows.Forms.GroupBox groupBox12 : Public
-    System.Windows.Forms.RadioButton radioButton25 : Public
-    System.Windows.Forms.RadioButton radioButton23 : Public
-    System.Windows.Forms.RadioButton radioButton24 : Public
-    System.Windows.Forms.Button button5 : Public
-    System.Windows.Forms.Button button6 : Public
-    System.Windows.Forms.DateTimePicker dateTimePicker9 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_3 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_2 : Public
+    System.Windows.Forms.RadioButton radioButtonBranded1_1 : Public
+    System.Windows.Forms.Button BrandedButton1_2 : Public
+    System.Windows.Forms.Button BrandedButton1_1 : Public
+    System.Windows.Forms.DateTimePicker dateTimePickerBranded1 : Public
     System.Windows.Forms.DateTimePicker dateTimePicker10 : Public
     System.Windows.Forms.Panel panelLastochka : Public
     System.Windows.Forms.Panel panel6 : Public
@@ -125,9 +127,12 @@ Class Task5Railwayv2.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     System.Windows.Forms.Button LastochkaButton1_1 : Public
     System.Windows.Forms.DateTimePicker dateTimePickerLastochka1 : Public
     System.Windows.Forms.DateTimePicker dateTimePicker16 : Public
+    System.Windows.Forms.Panel panelIssueds : Public
     Int32 ymove : Public
   Methods:
-    newOrdered(Label, Label, Label, GroupBox, GroupBox, GroupBox, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32): PrivateScope, Public, HideBySig
+    newOrdered(Label, Label, Label, GroupBox, GroupBox, GroupBox, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     InitializeComponent(): PrivateScope, Public, HideBySig
-    CreateMyOrderedPanel(Panel, Int32, Int32, Int32, Int32, GroupBox, Label, GroupBox, Label, GroupBox, Label, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32, Int32): PrivateScope, Public, HideBySig
-    OnClick(Object, EventArgs): PrivateScope, Public, HideBySig
+    CreateMyOrderedPanel(Panel, Int32, Int32, Int32, Int32, GroupBox, Label, GroupBox, Label, GroupBox, Label, GroupBox, Label, Label, Label, Label, Button, Button, DateTimePicker, Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnClickDel(Object, EventArgs): PrivateScope, Public, HideBySig
+    OnClickBuy(Object, EventArgs): PrivateScope, Public, HideBySig
+    OnClickInfo(Object, EventArgs): PrivateScope, Public, HideBySig
