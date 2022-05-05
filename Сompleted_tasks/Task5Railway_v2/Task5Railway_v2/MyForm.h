@@ -235,6 +235,12 @@ public: System::Windows::Forms::Button^ LastochkaButton1_1;
 public: System::Windows::Forms::DateTimePicker^ dateTimePickerLastochka1;
 public: System::Windows::Forms::DateTimePicker^ dateTimePicker16;
 public: System::Windows::Forms::Panel^ panelIssueds;
+private: System::Windows::Forms::PictureBox^ pictureBoxMem;
+public:
+
+public:
+
+public:
 public:
 private:
 public:
@@ -441,12 +447,22 @@ private:
 			GroupBox^ _panelGB3, GroupBox^ _panelGB4,
 			Label^ info1, Label^ info2, Label^ info3, Label^ info4,
 			Button^ btn1, Button^ btn2, DateTimePicker^ dtp, int type, bool order) {
-
-			//Panel^ panel = gcnew Panel();
 			Y = panelDesktopPanel->System::Windows::Forms::Panel::Control::Width;
+			bool flafvis = false;
+			if (panelOrdered->Visible == false) {
+				panelOrdered->Visible = true;
+				flafvis = true;
+			}
+			panelIssueds->AutoScroll = false;
+			panelOrdered->AutoScroll = false;
 			CreateMyOrderedPanel(panelOrdered, 15, 10 + 120 * countOrdered, Y - 32, 100, _panelGB1, radioBTN1,
 				_panelGB2, radioBTN2, _panelGB3, radioBTN3, _panelGB4,
 				info1, info2, info3, info4, btn2, btn1, dtp, index, type, order);
+			panelIssueds->AutoScroll = true;
+			panelOrdered->AutoScroll = true;
+			if (flafvis == true) {
+				panelOrdered->Visible = false;
+			}
 		}
 
 #pragma region Windows Form Designer generated code
@@ -475,6 +491,65 @@ private:
 			this->btnMaximize = (gcnew System::Windows::Forms::Button());
 			this->lblTitle = (gcnew System::Windows::Forms::Label());
 			this->panelDesktopPanel = (gcnew System::Windows::Forms::Panel());
+			this->pictureBoxWellcome = (gcnew System::Windows::Forms::PictureBox());
+			this->panelLastochka = (gcnew System::Windows::Forms::Panel());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->groupBoxLastochka3_1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka3_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxLastochka3_4 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblLastochka3_2 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka3_4 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka3_3 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka3_1 = (gcnew System::Windows::Forms::Label());
+			this->groupBoxLastochka3_3 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka3_6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka3_5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka3_4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka3_3 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxLastochka3_2 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka3_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->LastochkaButton3_2 = (gcnew System::Windows::Forms::Button());
+			this->LastochkaButton3_1 = (gcnew System::Windows::Forms::Button());
+			this->dateTimePickerLastochka3 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker12 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->groupBoxLastochka2_1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka2_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxLastochka2_4 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblLastochka2_2 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka2_4 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka2_3 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka2_1 = (gcnew System::Windows::Forms::Label());
+			this->groupBoxLastochka2_3 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka2_6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka2_5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka2_4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka2_3 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxLastochka2_2 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka2_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->LastochkaButton2_2 = (gcnew System::Windows::Forms::Button());
+			this->LastochkaButton2_1 = (gcnew System::Windows::Forms::Button());
+			this->dateTimePickerLastochka2 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker14 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->groupBoxLastochka1_4 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblLastochka1_2 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka1_4 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka1_3 = (gcnew System::Windows::Forms::Label());
+			this->lblLastochka1_1 = (gcnew System::Windows::Forms::Label());
+			this->groupBoxLastochka1_3 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka1_6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka1_5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka1_4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioLastochka1_3 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxLastochka1_2 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka1_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->groupBoxLastochka1_1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioLastochka1_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->LastochkaButton1_2 = (gcnew System::Windows::Forms::Button());
+			this->LastochkaButton1_1 = (gcnew System::Windows::Forms::Button());
+			this->dateTimePickerLastochka1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker16 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->panelBranded = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
@@ -544,6 +619,7 @@ private:
 			this->dateTimePicker10 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->panelIssueds = (gcnew System::Windows::Forms::Panel());
 			this->panelOrdered = (gcnew System::Windows::Forms::Panel());
+			this->pictureBoxMem = (gcnew System::Windows::Forms::PictureBox());
 			this->panelFaster = (gcnew System::Windows::Forms::Panel());
 			this->activePanelFast_3 = (gcnew System::Windows::Forms::Panel());
 			this->groupBoxFast_3_4 = (gcnew System::Windows::Forms::GroupBox());
@@ -608,102 +684,11 @@ private:
 			this->FastButton_1_1 = (gcnew System::Windows::Forms::Button());
 			this->dateTimePickerFast_1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->pictureBoxWellcome = (gcnew System::Windows::Forms::PictureBox());
-			this->panelLastochka = (gcnew System::Windows::Forms::Panel());
-			this->panel6 = (gcnew System::Windows::Forms::Panel());
-			this->groupBoxLastochka3_1 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka3_1 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBoxLastochka3_4 = (gcnew System::Windows::Forms::GroupBox());
-			this->lblLastochka3_2 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka3_4 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka3_3 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka3_1 = (gcnew System::Windows::Forms::Label());
-			this->groupBoxLastochka3_3 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka3_6 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka3_5 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka3_4 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka3_3 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBoxLastochka3_2 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka3_2 = (gcnew System::Windows::Forms::RadioButton());
-			this->LastochkaButton3_2 = (gcnew System::Windows::Forms::Button());
-			this->LastochkaButton3_1 = (gcnew System::Windows::Forms::Button());
-			this->dateTimePickerLastochka3 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker12 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->panel7 = (gcnew System::Windows::Forms::Panel());
-			this->groupBoxLastochka2_1 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka2_1 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBoxLastochka2_4 = (gcnew System::Windows::Forms::GroupBox());
-			this->lblLastochka2_2 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka2_4 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka2_3 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka2_1 = (gcnew System::Windows::Forms::Label());
-			this->groupBoxLastochka2_3 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka2_6 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka2_5 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka2_4 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka2_3 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBoxLastochka2_2 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka2_2 = (gcnew System::Windows::Forms::RadioButton());
-			this->LastochkaButton2_2 = (gcnew System::Windows::Forms::Button());
-			this->LastochkaButton2_1 = (gcnew System::Windows::Forms::Button());
-			this->dateTimePickerLastochka2 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker14 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->panel8 = (gcnew System::Windows::Forms::Panel());
-			this->groupBoxLastochka1_4 = (gcnew System::Windows::Forms::GroupBox());
-			this->lblLastochka1_2 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka1_4 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka1_3 = (gcnew System::Windows::Forms::Label());
-			this->lblLastochka1_1 = (gcnew System::Windows::Forms::Label());
-			this->groupBoxLastochka1_3 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka1_6 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka1_5 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka1_4 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioLastochka1_3 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBoxLastochka1_2 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka1_2 = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBoxLastochka1_1 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioLastochka1_1 = (gcnew System::Windows::Forms::RadioButton());
-			this->LastochkaButton1_2 = (gcnew System::Windows::Forms::Button());
-			this->LastochkaButton1_1 = (gcnew System::Windows::Forms::Button());
-			this->dateTimePickerLastochka1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker16 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			this->panelTitleBar->SuspendLayout();
 			this->panel1->SuspendLayout();
 			this->panelDesktopPanel->SuspendLayout();
-			this->panelBranded->SuspendLayout();
-			this->panel3->SuspendLayout();
-			this->groupBox4->SuspendLayout();
-			this->groupBox1->SuspendLayout();
-			this->groupBox2->SuspendLayout();
-			this->groupBox3->SuspendLayout();
-			this->panel4->SuspendLayout();
-			this->groupBox8->SuspendLayout();
-			this->groupBox5->SuspendLayout();
-			this->groupBox6->SuspendLayout();
-			this->groupBox7->SuspendLayout();
-			this->panel5->SuspendLayout();
-			this->groupBox9->SuspendLayout();
-			this->groupBox10->SuspendLayout();
-			this->groupBox11->SuspendLayout();
-			this->groupBox12->SuspendLayout();
-			this->panelFaster->SuspendLayout();
-			this->activePanelFast_3->SuspendLayout();
-			this->groupBoxFast_3_4->SuspendLayout();
-			this->groupBoxFast_3_3->SuspendLayout();
-			this->groupBoxFast_3_2->SuspendLayout();
-			this->groupBoxFast_3_1->SuspendLayout();
-			this->activePanelFast_2->SuspendLayout();
-			this->groupBoxFast_2_4->SuspendLayout();
-			this->groupBoxFast_2_3->SuspendLayout();
-			this->groupBoxFast_2_2->SuspendLayout();
-			this->groupBoxFast_2_1->SuspendLayout();
-			this->activePanelFast_1->SuspendLayout();
-			this->groupBoxFast_1_4->SuspendLayout();
-			this->groupBoxFast_1_3->SuspendLayout();
-			this->groupBoxFast_1_2->SuspendLayout();
-			this->groupBoxFast_1_1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxWellcome))->BeginInit();
 			this->panelLastochka->SuspendLayout();
 			this->panel6->SuspendLayout();
@@ -721,6 +706,39 @@ private:
 			this->groupBoxLastochka1_3->SuspendLayout();
 			this->groupBoxLastochka1_2->SuspendLayout();
 			this->groupBoxLastochka1_1->SuspendLayout();
+			this->panelBranded->SuspendLayout();
+			this->panel3->SuspendLayout();
+			this->groupBox4->SuspendLayout();
+			this->groupBox1->SuspendLayout();
+			this->groupBox2->SuspendLayout();
+			this->groupBox3->SuspendLayout();
+			this->panel4->SuspendLayout();
+			this->groupBox8->SuspendLayout();
+			this->groupBox5->SuspendLayout();
+			this->groupBox6->SuspendLayout();
+			this->groupBox7->SuspendLayout();
+			this->panel5->SuspendLayout();
+			this->groupBox9->SuspendLayout();
+			this->groupBox10->SuspendLayout();
+			this->groupBox11->SuspendLayout();
+			this->groupBox12->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxMem))->BeginInit();
+			this->panelFaster->SuspendLayout();
+			this->activePanelFast_3->SuspendLayout();
+			this->groupBoxFast_3_4->SuspendLayout();
+			this->groupBoxFast_3_3->SuspendLayout();
+			this->groupBoxFast_3_2->SuspendLayout();
+			this->groupBoxFast_3_1->SuspendLayout();
+			this->activePanelFast_2->SuspendLayout();
+			this->groupBoxFast_2_4->SuspendLayout();
+			this->groupBoxFast_2_3->SuspendLayout();
+			this->groupBoxFast_2_2->SuspendLayout();
+			this->groupBoxFast_2_1->SuspendLayout();
+			this->activePanelFast_1->SuspendLayout();
+			this->groupBoxFast_1_4->SuspendLayout();
+			this->groupBoxFast_1_3->SuspendLayout();
+			this->groupBoxFast_1_2->SuspendLayout();
+			this->groupBoxFast_1_1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -887,6 +905,7 @@ private:
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Gorky Railway";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
+			this->label1->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_Home);
 			// 
 			// panelTitleBar
 			// 
@@ -903,7 +922,9 @@ private:
 			this->panelTitleBar->Size = System::Drawing::Size(661, 80);
 			this->panelTitleBar->TabIndex = 1;
 			this->panelTitleBar->DoubleClick += gcnew System::EventHandler(this, &MyForm::btnMaximize_Click);
+			this->panelTitleBar->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_Transperent45);
 			this->panelTitleBar->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseMove);
+			this->panelTitleBar->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_Transperent100);
 			// 
 			// panel1
 			// 
@@ -975,6 +996,7 @@ private:
 			// 
 			this->lblTitle->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->lblTitle->AutoSize = true;
+			this->lblTitle->BackColor = System::Drawing::Color::Transparent;
 			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Malgun Gothic", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblTitle->ForeColor = System::Drawing::Color::White;
@@ -984,20 +1006,693 @@ private:
 			this->lblTitle->TabIndex = 0;
 			this->lblTitle->Text = L"Wellcome";
 			this->lblTitle->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->lblTitle->DoubleClick += gcnew System::EventHandler(this, &MyForm::btnMaximize_Click);
+			this->lblTitle->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_Transperent45);
+			this->lblTitle->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseMove);
+			this->lblTitle->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_Transperent100);
 			// 
 			// panelDesktopPanel
 			// 
+			this->panelDesktopPanel->Controls->Add(this->panelFaster);
 			this->panelDesktopPanel->Controls->Add(this->pictureBoxWellcome);
 			this->panelDesktopPanel->Controls->Add(this->panelLastochka);
 			this->panelDesktopPanel->Controls->Add(this->panelBranded);
 			this->panelDesktopPanel->Controls->Add(this->panelIssueds);
 			this->panelDesktopPanel->Controls->Add(this->panelOrdered);
-			this->panelDesktopPanel->Controls->Add(this->panelFaster);
+			this->panelDesktopPanel->Controls->Add(this->pictureBoxMem);
 			this->panelDesktopPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panelDesktopPanel->Location = System::Drawing::Point(219, 80);
 			this->panelDesktopPanel->Name = L"panelDesktopPanel";
 			this->panelDesktopPanel->Size = System::Drawing::Size(661, 360);
 			this->panelDesktopPanel->TabIndex = 2;
+			// 
+			// pictureBoxWellcome
+			// 
+			this->pictureBoxWellcome->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBoxWellcome->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxWellcome.Image")));
+			this->pictureBoxWellcome->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxWellcome.InitialImage")));
+			this->pictureBoxWellcome->Location = System::Drawing::Point(0, 0);
+			this->pictureBoxWellcome->Name = L"pictureBoxWellcome";
+			this->pictureBoxWellcome->Size = System::Drawing::Size(661, 360);
+			this->pictureBoxWellcome->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBoxWellcome->TabIndex = 0;
+			this->pictureBoxWellcome->TabStop = false;
+			// 
+			// panelLastochka
+			// 
+			this->panelLastochka->AutoScroll = true;
+			this->panelLastochka->BackColor = System::Drawing::Color::LightBlue;
+			this->panelLastochka->Controls->Add(this->panel6);
+			this->panelLastochka->Controls->Add(this->panel7);
+			this->panelLastochka->Controls->Add(this->panel8);
+			this->panelLastochka->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panelLastochka->Location = System::Drawing::Point(0, 0);
+			this->panelLastochka->Name = L"panelLastochka";
+			this->panelLastochka->Size = System::Drawing::Size(661, 360);
+			this->panelLastochka->TabIndex = 15;
+			this->panelLastochka->Visible = false;
+			// 
+			// panel6
+			// 
+			this->panel6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel6->BackColor = System::Drawing::Color::Azure;
+			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel6->Controls->Add(this->groupBoxLastochka3_1);
+			this->panel6->Controls->Add(this->groupBoxLastochka3_4);
+			this->panel6->Controls->Add(this->groupBoxLastochka3_3);
+			this->panel6->Controls->Add(this->groupBoxLastochka3_2);
+			this->panel6->Controls->Add(this->LastochkaButton3_2);
+			this->panel6->Controls->Add(this->LastochkaButton3_1);
+			this->panel6->Controls->Add(this->dateTimePickerLastochka3);
+			this->panel6->Controls->Add(this->dateTimePicker12);
+			this->panel6->Location = System::Drawing::Point(15, 250);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(631, 100);
+			this->panel6->TabIndex = 12;
+			// 
+			// groupBoxLastochka3_1
+			// 
+			this->groupBoxLastochka3_1->Controls->Add(this->radioLastochka3_1);
+			this->groupBoxLastochka3_1->Location = System::Drawing::Point(3, 0);
+			this->groupBoxLastochka3_1->Name = L"groupBoxLastochka3_1";
+			this->groupBoxLastochka3_1->Size = System::Drawing::Size(114, 97);
+			this->groupBoxLastochka3_1->TabIndex = 8;
+			this->groupBoxLastochka3_1->TabStop = false;
+			this->groupBoxLastochka3_1->Text = L"Тип вагона:";
+			// 
+			// radioLastochka3_1
+			// 
+			this->radioLastochka3_1->AutoSize = true;
+			this->radioLastochka3_1->Checked = true;
+			this->radioLastochka3_1->Location = System::Drawing::Point(6, 50);
+			this->radioLastochka3_1->Name = L"radioLastochka3_1";
+			this->radioLastochka3_1->Size = System::Drawing::Size(49, 17);
+			this->radioLastochka3_1->TabIndex = 5;
+			this->radioLastochka3_1->TabStop = true;
+			this->radioLastochka3_1->Text = L"Купе";
+			this->radioLastochka3_1->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxLastochka3_4
+			// 
+			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_2);
+			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_4);
+			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_3);
+			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_1);
+			this->groupBoxLastochka3_4->Location = System::Drawing::Point(381, 0);
+			this->groupBoxLastochka3_4->Name = L"groupBoxLastochka3_4";
+			this->groupBoxLastochka3_4->Size = System::Drawing::Size(120, 97);
+			this->groupBoxLastochka3_4->TabIndex = 10;
+			this->groupBoxLastochka3_4->TabStop = false;
+			this->groupBoxLastochka3_4->Text = L"Информация:";
+			// 
+			// lblLastochka3_2
+			// 
+			this->lblLastochka3_2->AutoSize = true;
+			this->lblLastochka3_2->Location = System::Drawing::Point(7, 39);
+			this->lblLastochka3_2->Name = L"lblLastochka3_2";
+			this->lblLastochka3_2->Size = System::Drawing::Size(51, 13);
+			this->lblLastochka3_2->TabIndex = 3;
+			this->lblLastochka3_2->Text = L"Мест: 12";
+			// 
+			// lblLastochka3_4
+			// 
+			this->lblLastochka3_4->AutoSize = true;
+			this->lblLastochka3_4->Location = System::Drawing::Point(7, 74);
+			this->lblLastochka3_4->Name = L"lblLastochka3_4";
+			this->lblLastochka3_4->Size = System::Drawing::Size(68, 13);
+			this->lblLastochka3_4->TabIndex = 2;
+			this->lblLastochka3_4->Text = L"Стоимость: ";
+			// 
+			// lblLastochka3_3
+			// 
+			this->lblLastochka3_3->AutoSize = true;
+			this->lblLastochka3_3->Location = System::Drawing::Point(7, 57);
+			this->lblLastochka3_3->Name = L"lblLastochka3_3";
+			this->lblLastochka3_3->Size = System::Drawing::Size(101, 13);
+			this->lblLastochka3_3->TabIndex = 1;
+			this->lblLastochka3_3->Text = L"Путь: НН - Москва";
+			// 
+			// lblLastochka3_1
+			// 
+			this->lblLastochka3_1->AutoSize = true;
+			this->lblLastochka3_1->Location = System::Drawing::Point(7, 21);
+			this->lblLastochka3_1->Name = L"lblLastochka3_1";
+			this->lblLastochka3_1->Size = System::Drawing::Size(109, 13);
+			this->lblLastochka3_1->TabIndex = 0;
+			this->lblLastochka3_1->Text = L"Время: 14:10 - 18:20";
+			// 
+			// groupBoxLastochka3_3
+			// 
+			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_6);
+			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_5);
+			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_4);
+			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_3);
+			this->groupBoxLastochka3_3->Location = System::Drawing::Point(247, 0);
+			this->groupBoxLastochka3_3->Name = L"groupBoxLastochka3_3";
+			this->groupBoxLastochka3_3->Size = System::Drawing::Size(126, 97);
+			this->groupBoxLastochka3_3->TabIndex = 9;
+			this->groupBoxLastochka3_3->TabStop = false;
+			this->groupBoxLastochka3_3->Text = L"Кол-во человек:";
+			// 
+			// radioLastochka3_6
+			// 
+			this->radioLastochka3_6->AutoSize = true;
+			this->radioLastochka3_6->Location = System::Drawing::Point(8, 72);
+			this->radioLastochka3_6->Name = L"radioLastochka3_6";
+			this->radioLastochka3_6->Size = System::Drawing::Size(64, 17);
+			this->radioLastochka3_6->TabIndex = 9;
+			this->radioLastochka3_6->TabStop = true;
+			this->radioLastochka3_6->Text = L"Четыре";
+			this->radioLastochka3_6->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka3_5
+			// 
+			this->radioLastochka3_5->AutoSize = true;
+			this->radioLastochka3_5->Location = System::Drawing::Point(8, 54);
+			this->radioLastochka3_5->Name = L"radioLastochka3_5";
+			this->radioLastochka3_5->Size = System::Drawing::Size(44, 17);
+			this->radioLastochka3_5->TabIndex = 8;
+			this->radioLastochka3_5->TabStop = true;
+			this->radioLastochka3_5->Text = L"Три";
+			this->radioLastochka3_5->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka3_4
+			// 
+			this->radioLastochka3_4->AutoSize = true;
+			this->radioLastochka3_4->Location = System::Drawing::Point(8, 36);
+			this->radioLastochka3_4->Name = L"radioLastochka3_4";
+			this->radioLastochka3_4->Size = System::Drawing::Size(46, 17);
+			this->radioLastochka3_4->TabIndex = 7;
+			this->radioLastochka3_4->TabStop = true;
+			this->radioLastochka3_4->Text = L"Два";
+			this->radioLastochka3_4->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka3_3
+			// 
+			this->radioLastochka3_3->AutoSize = true;
+			this->radioLastochka3_3->Checked = true;
+			this->radioLastochka3_3->Location = System::Drawing::Point(8, 18);
+			this->radioLastochka3_3->Name = L"radioLastochka3_3";
+			this->radioLastochka3_3->Size = System::Drawing::Size(51, 17);
+			this->radioLastochka3_3->TabIndex = 5;
+			this->radioLastochka3_3->TabStop = true;
+			this->radioLastochka3_3->Text = L"Один";
+			this->radioLastochka3_3->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxLastochka3_2
+			// 
+			this->groupBoxLastochka3_2->Controls->Add(this->radioLastochka3_2);
+			this->groupBoxLastochka3_2->Location = System::Drawing::Point(125, 0);
+			this->groupBoxLastochka3_2->Name = L"groupBoxLastochka3_2";
+			this->groupBoxLastochka3_2->Size = System::Drawing::Size(114, 97);
+			this->groupBoxLastochka3_2->TabIndex = 8;
+			this->groupBoxLastochka3_2->TabStop = false;
+			this->groupBoxLastochka3_2->Text = L"Тип места:";
+			// 
+			// radioLastochka3_2
+			// 
+			this->radioLastochka3_2->AutoSize = true;
+			this->radioLastochka3_2->Checked = true;
+			this->radioLastochka3_2->Location = System::Drawing::Point(8, 49);
+			this->radioLastochka3_2->Name = L"radioLastochka3_2";
+			this->radioLastochka3_2->Size = System::Drawing::Size(65, 17);
+			this->radioLastochka3_2->TabIndex = 5;
+			this->radioLastochka3_2->TabStop = true;
+			this->radioLastochka3_2->Text = L"Нижнее";
+			this->radioLastochka3_2->UseVisualStyleBackColor = true;
+			// 
+			// LastochkaButton3_2
+			// 
+			this->LastochkaButton3_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->LastochkaButton3_2->BackColor = System::Drawing::Color::Gold;
+			this->LastochkaButton3_2->FlatAppearance->BorderSize = 0;
+			this->LastochkaButton3_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LastochkaButton3_2->Location = System::Drawing::Point(524, 0);
+			this->LastochkaButton3_2->Name = L"LastochkaButton3_2";
+			this->LastochkaButton3_2->Size = System::Drawing::Size(105, 41);
+			this->LastochkaButton3_2->TabIndex = 3;
+			this->LastochkaButton3_2->Text = L"Заказать";
+			this->LastochkaButton3_2->UseVisualStyleBackColor = false;
+			this->LastochkaButton3_2->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton3_2_Click);
+			// 
+			// LastochkaButton3_1
+			// 
+			this->LastochkaButton3_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->LastochkaButton3_1->BackColor = System::Drawing::Color::MediumAquamarine;
+			this->LastochkaButton3_1->FlatAppearance->BorderSize = 0;
+			this->LastochkaButton3_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LastochkaButton3_1->Location = System::Drawing::Point(524, 41);
+			this->LastochkaButton3_1->Name = L"LastochkaButton3_1";
+			this->LastochkaButton3_1->Size = System::Drawing::Size(105, 40);
+			this->LastochkaButton3_1->TabIndex = 2;
+			this->LastochkaButton3_1->Text = L"Купить";
+			this->LastochkaButton3_1->UseVisualStyleBackColor = false;
+			this->LastochkaButton3_1->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton3_1_Click);
+			// 
+			// dateTimePickerLastochka3
+			// 
+			this->dateTimePickerLastochka3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->dateTimePickerLastochka3->CalendarTitleForeColor = System::Drawing::Color::White;
+			this->dateTimePickerLastochka3->Location = System::Drawing::Point(524, 81);
+			this->dateTimePickerLastochka3->Name = L"dateTimePickerLastochka3";
+			this->dateTimePickerLastochka3->Size = System::Drawing::Size(106, 19);
+			this->dateTimePickerLastochka3->TabIndex = 1;
+			// 
+			// dateTimePicker12
+			// 
+			this->dateTimePicker12->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker12->Name = L"dateTimePicker12";
+			this->dateTimePicker12->Size = System::Drawing::Size(142, 19);
+			this->dateTimePicker12->TabIndex = 0;
+			// 
+			// panel7
+			// 
+			this->panel7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel7->BackColor = System::Drawing::Color::Azure;
+			this->panel7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel7->Controls->Add(this->groupBoxLastochka2_1);
+			this->panel7->Controls->Add(this->groupBoxLastochka2_4);
+			this->panel7->Controls->Add(this->groupBoxLastochka2_3);
+			this->panel7->Controls->Add(this->groupBoxLastochka2_2);
+			this->panel7->Controls->Add(this->LastochkaButton2_2);
+			this->panel7->Controls->Add(this->LastochkaButton2_1);
+			this->panel7->Controls->Add(this->dateTimePickerLastochka2);
+			this->panel7->Controls->Add(this->dateTimePicker14);
+			this->panel7->Location = System::Drawing::Point(15, 130);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(631, 100);
+			this->panel7->TabIndex = 11;
+			// 
+			// groupBoxLastochka2_1
+			// 
+			this->groupBoxLastochka2_1->Controls->Add(this->radioLastochka2_1);
+			this->groupBoxLastochka2_1->Location = System::Drawing::Point(3, 0);
+			this->groupBoxLastochka2_1->Name = L"groupBoxLastochka2_1";
+			this->groupBoxLastochka2_1->Size = System::Drawing::Size(114, 97);
+			this->groupBoxLastochka2_1->TabIndex = 8;
+			this->groupBoxLastochka2_1->TabStop = false;
+			this->groupBoxLastochka2_1->Text = L"Тип вагона:";
+			// 
+			// radioLastochka2_1
+			// 
+			this->radioLastochka2_1->AutoSize = true;
+			this->radioLastochka2_1->Checked = true;
+			this->radioLastochka2_1->Location = System::Drawing::Point(6, 47);
+			this->radioLastochka2_1->Name = L"radioLastochka2_1";
+			this->radioLastochka2_1->Size = System::Drawing::Size(49, 17);
+			this->radioLastochka2_1->TabIndex = 5;
+			this->radioLastochka2_1->TabStop = true;
+			this->radioLastochka2_1->Text = L"Купе";
+			this->radioLastochka2_1->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxLastochka2_4
+			// 
+			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_2);
+			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_4);
+			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_3);
+			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_1);
+			this->groupBoxLastochka2_4->Location = System::Drawing::Point(381, 0);
+			this->groupBoxLastochka2_4->Name = L"groupBoxLastochka2_4";
+			this->groupBoxLastochka2_4->Size = System::Drawing::Size(120, 97);
+			this->groupBoxLastochka2_4->TabIndex = 10;
+			this->groupBoxLastochka2_4->TabStop = false;
+			this->groupBoxLastochka2_4->Text = L"Информация:";
+			// 
+			// lblLastochka2_2
+			// 
+			this->lblLastochka2_2->AutoSize = true;
+			this->lblLastochka2_2->Location = System::Drawing::Point(7, 39);
+			this->lblLastochka2_2->Name = L"lblLastochka2_2";
+			this->lblLastochka2_2->Size = System::Drawing::Size(51, 13);
+			this->lblLastochka2_2->TabIndex = 3;
+			this->lblLastochka2_2->Text = L"Мест: 22";
+			// 
+			// lblLastochka2_4
+			// 
+			this->lblLastochka2_4->AutoSize = true;
+			this->lblLastochka2_4->Location = System::Drawing::Point(7, 74);
+			this->lblLastochka2_4->Name = L"lblLastochka2_4";
+			this->lblLastochka2_4->Size = System::Drawing::Size(68, 13);
+			this->lblLastochka2_4->TabIndex = 2;
+			this->lblLastochka2_4->Text = L"Стоимость: ";
+			// 
+			// lblLastochka2_3
+			// 
+			this->lblLastochka2_3->AutoSize = true;
+			this->lblLastochka2_3->Location = System::Drawing::Point(7, 57);
+			this->lblLastochka2_3->Name = L"lblLastochka2_3";
+			this->lblLastochka2_3->Size = System::Drawing::Size(101, 13);
+			this->lblLastochka2_3->TabIndex = 1;
+			this->lblLastochka2_3->Text = L"Путь: НН - Москва";
+			// 
+			// lblLastochka2_1
+			// 
+			this->lblLastochka2_1->AutoSize = true;
+			this->lblLastochka2_1->Location = System::Drawing::Point(7, 21);
+			this->lblLastochka2_1->Name = L"lblLastochka2_1";
+			this->lblLastochka2_1->Size = System::Drawing::Size(109, 13);
+			this->lblLastochka2_1->TabIndex = 0;
+			this->lblLastochka2_1->Text = L"Время: 10:45 - 14:00";
+			// 
+			// groupBoxLastochka2_3
+			// 
+			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_6);
+			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_5);
+			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_4);
+			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_3);
+			this->groupBoxLastochka2_3->Location = System::Drawing::Point(247, 0);
+			this->groupBoxLastochka2_3->Name = L"groupBoxLastochka2_3";
+			this->groupBoxLastochka2_3->Size = System::Drawing::Size(126, 97);
+			this->groupBoxLastochka2_3->TabIndex = 9;
+			this->groupBoxLastochka2_3->TabStop = false;
+			this->groupBoxLastochka2_3->Text = L"Кол-во человек:";
+			// 
+			// radioLastochka2_6
+			// 
+			this->radioLastochka2_6->AutoSize = true;
+			this->radioLastochka2_6->Location = System::Drawing::Point(8, 72);
+			this->radioLastochka2_6->Name = L"radioLastochka2_6";
+			this->radioLastochka2_6->Size = System::Drawing::Size(64, 17);
+			this->radioLastochka2_6->TabIndex = 9;
+			this->radioLastochka2_6->TabStop = true;
+			this->radioLastochka2_6->Text = L"Четыре";
+			this->radioLastochka2_6->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka2_5
+			// 
+			this->radioLastochka2_5->AutoSize = true;
+			this->radioLastochka2_5->Location = System::Drawing::Point(8, 54);
+			this->radioLastochka2_5->Name = L"radioLastochka2_5";
+			this->radioLastochka2_5->Size = System::Drawing::Size(44, 17);
+			this->radioLastochka2_5->TabIndex = 8;
+			this->radioLastochka2_5->TabStop = true;
+			this->radioLastochka2_5->Text = L"Три";
+			this->radioLastochka2_5->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka2_4
+			// 
+			this->radioLastochka2_4->AutoSize = true;
+			this->radioLastochka2_4->Location = System::Drawing::Point(8, 36);
+			this->radioLastochka2_4->Name = L"radioLastochka2_4";
+			this->radioLastochka2_4->Size = System::Drawing::Size(46, 17);
+			this->radioLastochka2_4->TabIndex = 7;
+			this->radioLastochka2_4->TabStop = true;
+			this->radioLastochka2_4->Text = L"Два";
+			this->radioLastochka2_4->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka2_3
+			// 
+			this->radioLastochka2_3->AutoSize = true;
+			this->radioLastochka2_3->Checked = true;
+			this->radioLastochka2_3->Location = System::Drawing::Point(8, 18);
+			this->radioLastochka2_3->Name = L"radioLastochka2_3";
+			this->radioLastochka2_3->Size = System::Drawing::Size(51, 17);
+			this->radioLastochka2_3->TabIndex = 5;
+			this->radioLastochka2_3->TabStop = true;
+			this->radioLastochka2_3->Text = L"Один";
+			this->radioLastochka2_3->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxLastochka2_2
+			// 
+			this->groupBoxLastochka2_2->Controls->Add(this->radioLastochka2_2);
+			this->groupBoxLastochka2_2->Location = System::Drawing::Point(125, 0);
+			this->groupBoxLastochka2_2->Name = L"groupBoxLastochka2_2";
+			this->groupBoxLastochka2_2->Size = System::Drawing::Size(114, 97);
+			this->groupBoxLastochka2_2->TabIndex = 8;
+			this->groupBoxLastochka2_2->TabStop = false;
+			this->groupBoxLastochka2_2->Text = L"Тип места:";
+			// 
+			// radioLastochka2_2
+			// 
+			this->radioLastochka2_2->AutoSize = true;
+			this->radioLastochka2_2->Checked = true;
+			this->radioLastochka2_2->Location = System::Drawing::Point(8, 47);
+			this->radioLastochka2_2->Name = L"radioLastochka2_2";
+			this->radioLastochka2_2->Size = System::Drawing::Size(65, 17);
+			this->radioLastochka2_2->TabIndex = 5;
+			this->radioLastochka2_2->TabStop = true;
+			this->radioLastochka2_2->Text = L"Нижнее";
+			this->radioLastochka2_2->UseVisualStyleBackColor = true;
+			// 
+			// LastochkaButton2_2
+			// 
+			this->LastochkaButton2_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->LastochkaButton2_2->BackColor = System::Drawing::Color::Gold;
+			this->LastochkaButton2_2->FlatAppearance->BorderSize = 0;
+			this->LastochkaButton2_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LastochkaButton2_2->Location = System::Drawing::Point(524, 0);
+			this->LastochkaButton2_2->Name = L"LastochkaButton2_2";
+			this->LastochkaButton2_2->Size = System::Drawing::Size(105, 41);
+			this->LastochkaButton2_2->TabIndex = 3;
+			this->LastochkaButton2_2->Text = L"Заказать";
+			this->LastochkaButton2_2->UseVisualStyleBackColor = false;
+			this->LastochkaButton2_2->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton2_2_Click);
+			// 
+			// LastochkaButton2_1
+			// 
+			this->LastochkaButton2_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->LastochkaButton2_1->BackColor = System::Drawing::Color::MediumAquamarine;
+			this->LastochkaButton2_1->FlatAppearance->BorderSize = 0;
+			this->LastochkaButton2_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LastochkaButton2_1->Location = System::Drawing::Point(524, 41);
+			this->LastochkaButton2_1->Name = L"LastochkaButton2_1";
+			this->LastochkaButton2_1->Size = System::Drawing::Size(105, 40);
+			this->LastochkaButton2_1->TabIndex = 2;
+			this->LastochkaButton2_1->Text = L"Купить";
+			this->LastochkaButton2_1->UseVisualStyleBackColor = false;
+			this->LastochkaButton2_1->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton2_1_Click);
+			// 
+			// dateTimePickerLastochka2
+			// 
+			this->dateTimePickerLastochka2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->dateTimePickerLastochka2->CalendarTitleForeColor = System::Drawing::Color::White;
+			this->dateTimePickerLastochka2->Location = System::Drawing::Point(524, 81);
+			this->dateTimePickerLastochka2->Name = L"dateTimePickerLastochka2";
+			this->dateTimePickerLastochka2->Size = System::Drawing::Size(106, 19);
+			this->dateTimePickerLastochka2->TabIndex = 1;
+			// 
+			// dateTimePicker14
+			// 
+			this->dateTimePicker14->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker14->Name = L"dateTimePicker14";
+			this->dateTimePicker14->Size = System::Drawing::Size(142, 19);
+			this->dateTimePicker14->TabIndex = 0;
+			// 
+			// panel8
+			// 
+			this->panel8->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel8->BackColor = System::Drawing::Color::Azure;
+			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel8->Controls->Add(this->groupBoxLastochka1_4);
+			this->panel8->Controls->Add(this->groupBoxLastochka1_3);
+			this->panel8->Controls->Add(this->groupBoxLastochka1_2);
+			this->panel8->Controls->Add(this->groupBoxLastochka1_1);
+			this->panel8->Controls->Add(this->LastochkaButton1_2);
+			this->panel8->Controls->Add(this->LastochkaButton1_1);
+			this->panel8->Controls->Add(this->dateTimePickerLastochka1);
+			this->panel8->Controls->Add(this->dateTimePicker16);
+			this->panel8->Location = System::Drawing::Point(15, 10);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(631, 100);
+			this->panel8->TabIndex = 0;
+			// 
+			// groupBoxLastochka1_4
+			// 
+			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_2);
+			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_4);
+			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_3);
+			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_1);
+			this->groupBoxLastochka1_4->Location = System::Drawing::Point(381, 0);
+			this->groupBoxLastochka1_4->Name = L"groupBoxLastochka1_4";
+			this->groupBoxLastochka1_4->Size = System::Drawing::Size(120, 97);
+			this->groupBoxLastochka1_4->TabIndex = 10;
+			this->groupBoxLastochka1_4->TabStop = false;
+			this->groupBoxLastochka1_4->Text = L"Информация:";
+			// 
+			// lblLastochka1_2
+			// 
+			this->lblLastochka1_2->AutoSize = true;
+			this->lblLastochka1_2->Location = System::Drawing::Point(7, 39);
+			this->lblLastochka1_2->Name = L"lblLastochka1_2";
+			this->lblLastochka1_2->Size = System::Drawing::Size(51, 13);
+			this->lblLastochka1_2->TabIndex = 3;
+			this->lblLastochka1_2->Text = L"Мест: 48";
+			// 
+			// lblLastochka1_4
+			// 
+			this->lblLastochka1_4->AutoSize = true;
+			this->lblLastochka1_4->Location = System::Drawing::Point(7, 74);
+			this->lblLastochka1_4->Name = L"lblLastochka1_4";
+			this->lblLastochka1_4->Size = System::Drawing::Size(68, 13);
+			this->lblLastochka1_4->TabIndex = 2;
+			this->lblLastochka1_4->Text = L"Стоимость: ";
+			// 
+			// lblLastochka1_3
+			// 
+			this->lblLastochka1_3->AutoSize = true;
+			this->lblLastochka1_3->Location = System::Drawing::Point(7, 57);
+			this->lblLastochka1_3->Name = L"lblLastochka1_3";
+			this->lblLastochka1_3->Size = System::Drawing::Size(101, 13);
+			this->lblLastochka1_3->TabIndex = 1;
+			this->lblLastochka1_3->Text = L"Путь: НН - Москва";
+			// 
+			// lblLastochka1_1
+			// 
+			this->lblLastochka1_1->AutoSize = true;
+			this->lblLastochka1_1->Location = System::Drawing::Point(7, 21);
+			this->lblLastochka1_1->Name = L"lblLastochka1_1";
+			this->lblLastochka1_1->Size = System::Drawing::Size(97, 13);
+			this->lblLastochka1_1->TabIndex = 0;
+			this->lblLastochka1_1->Text = L"Время: 2:40 - 5:35";
+			// 
+			// groupBoxLastochka1_3
+			// 
+			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_6);
+			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_5);
+			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_4);
+			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_3);
+			this->groupBoxLastochka1_3->Location = System::Drawing::Point(247, 0);
+			this->groupBoxLastochka1_3->Name = L"groupBoxLastochka1_3";
+			this->groupBoxLastochka1_3->Size = System::Drawing::Size(126, 97);
+			this->groupBoxLastochka1_3->TabIndex = 9;
+			this->groupBoxLastochka1_3->TabStop = false;
+			this->groupBoxLastochka1_3->Text = L"Кол-во человек:";
+			// 
+			// radioLastochka1_6
+			// 
+			this->radioLastochka1_6->AutoSize = true;
+			this->radioLastochka1_6->Location = System::Drawing::Point(8, 72);
+			this->radioLastochka1_6->Name = L"radioLastochka1_6";
+			this->radioLastochka1_6->Size = System::Drawing::Size(64, 17);
+			this->radioLastochka1_6->TabIndex = 9;
+			this->radioLastochka1_6->TabStop = true;
+			this->radioLastochka1_6->Text = L"Четыре";
+			this->radioLastochka1_6->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka1_5
+			// 
+			this->radioLastochka1_5->AutoSize = true;
+			this->radioLastochka1_5->Location = System::Drawing::Point(8, 54);
+			this->radioLastochka1_5->Name = L"radioLastochka1_5";
+			this->radioLastochka1_5->Size = System::Drawing::Size(44, 17);
+			this->radioLastochka1_5->TabIndex = 8;
+			this->radioLastochka1_5->TabStop = true;
+			this->radioLastochka1_5->Text = L"Три";
+			this->radioLastochka1_5->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka1_4
+			// 
+			this->radioLastochka1_4->AutoSize = true;
+			this->radioLastochka1_4->Location = System::Drawing::Point(8, 36);
+			this->radioLastochka1_4->Name = L"radioLastochka1_4";
+			this->radioLastochka1_4->Size = System::Drawing::Size(46, 17);
+			this->radioLastochka1_4->TabIndex = 7;
+			this->radioLastochka1_4->TabStop = true;
+			this->radioLastochka1_4->Text = L"Два";
+			this->radioLastochka1_4->UseVisualStyleBackColor = true;
+			// 
+			// radioLastochka1_3
+			// 
+			this->radioLastochka1_3->AutoSize = true;
+			this->radioLastochka1_3->Checked = true;
+			this->radioLastochka1_3->Location = System::Drawing::Point(8, 18);
+			this->radioLastochka1_3->Name = L"radioLastochka1_3";
+			this->radioLastochka1_3->Size = System::Drawing::Size(51, 17);
+			this->radioLastochka1_3->TabIndex = 5;
+			this->radioLastochka1_3->TabStop = true;
+			this->radioLastochka1_3->Text = L"Один";
+			this->radioLastochka1_3->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxLastochka1_2
+			// 
+			this->groupBoxLastochka1_2->Controls->Add(this->radioLastochka1_2);
+			this->groupBoxLastochka1_2->Location = System::Drawing::Point(125, 0);
+			this->groupBoxLastochka1_2->Name = L"groupBoxLastochka1_2";
+			this->groupBoxLastochka1_2->Size = System::Drawing::Size(114, 97);
+			this->groupBoxLastochka1_2->TabIndex = 8;
+			this->groupBoxLastochka1_2->TabStop = false;
+			this->groupBoxLastochka1_2->Text = L"Тип места:";
+			// 
+			// radioLastochka1_2
+			// 
+			this->radioLastochka1_2->AutoSize = true;
+			this->radioLastochka1_2->Checked = true;
+			this->radioLastochka1_2->Location = System::Drawing::Point(10, 47);
+			this->radioLastochka1_2->Name = L"radioLastochka1_2";
+			this->radioLastochka1_2->Size = System::Drawing::Size(65, 17);
+			this->radioLastochka1_2->TabIndex = 5;
+			this->radioLastochka1_2->TabStop = true;
+			this->radioLastochka1_2->Text = L"Нижнее";
+			this->radioLastochka1_2->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxLastochka1_1
+			// 
+			this->groupBoxLastochka1_1->Controls->Add(this->radioLastochka1_1);
+			this->groupBoxLastochka1_1->Location = System::Drawing::Point(3, 0);
+			this->groupBoxLastochka1_1->Name = L"groupBoxLastochka1_1";
+			this->groupBoxLastochka1_1->Size = System::Drawing::Size(114, 97);
+			this->groupBoxLastochka1_1->TabIndex = 7;
+			this->groupBoxLastochka1_1->TabStop = false;
+			this->groupBoxLastochka1_1->Text = L"Тип вагона:";
+			// 
+			// radioLastochka1_1
+			// 
+			this->radioLastochka1_1->AutoSize = true;
+			this->radioLastochka1_1->Checked = true;
+			this->radioLastochka1_1->Location = System::Drawing::Point(6, 47);
+			this->radioLastochka1_1->Name = L"radioLastochka1_1";
+			this->radioLastochka1_1->Size = System::Drawing::Size(49, 17);
+			this->radioLastochka1_1->TabIndex = 5;
+			this->radioLastochka1_1->TabStop = true;
+			this->radioLastochka1_1->Text = L"Купе";
+			this->radioLastochka1_1->UseVisualStyleBackColor = true;
+			// 
+			// LastochkaButton1_2
+			// 
+			this->LastochkaButton1_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->LastochkaButton1_2->BackColor = System::Drawing::Color::Gold;
+			this->LastochkaButton1_2->FlatAppearance->BorderSize = 0;
+			this->LastochkaButton1_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LastochkaButton1_2->Location = System::Drawing::Point(524, 0);
+			this->LastochkaButton1_2->Name = L"LastochkaButton1_2";
+			this->LastochkaButton1_2->Size = System::Drawing::Size(105, 41);
+			this->LastochkaButton1_2->TabIndex = 3;
+			this->LastochkaButton1_2->Text = L"Заказать";
+			this->LastochkaButton1_2->UseVisualStyleBackColor = false;
+			this->LastochkaButton1_2->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton1_2_Click);
+			// 
+			// LastochkaButton1_1
+			// 
+			this->LastochkaButton1_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->LastochkaButton1_1->BackColor = System::Drawing::Color::MediumAquamarine;
+			this->LastochkaButton1_1->FlatAppearance->BorderSize = 0;
+			this->LastochkaButton1_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LastochkaButton1_1->Location = System::Drawing::Point(524, 41);
+			this->LastochkaButton1_1->Name = L"LastochkaButton1_1";
+			this->LastochkaButton1_1->Size = System::Drawing::Size(105, 40);
+			this->LastochkaButton1_1->TabIndex = 2;
+			this->LastochkaButton1_1->Text = L"Купить";
+			this->LastochkaButton1_1->UseVisualStyleBackColor = false;
+			this->LastochkaButton1_1->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton1_1_Click);
+			// 
+			// dateTimePickerLastochka1
+			// 
+			this->dateTimePickerLastochka1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->dateTimePickerLastochka1->CalendarTitleForeColor = System::Drawing::Color::White;
+			this->dateTimePickerLastochka1->Location = System::Drawing::Point(524, 81);
+			this->dateTimePickerLastochka1->Name = L"dateTimePickerLastochka1";
+			this->dateTimePickerLastochka1->Size = System::Drawing::Size(106, 19);
+			this->dateTimePickerLastochka1->TabIndex = 1;
+			// 
+			// dateTimePicker16
+			// 
+			this->dateTimePicker16->Location = System::Drawing::Point(519, 102);
+			this->dateTimePicker16->Name = L"dateTimePicker16";
+			this->dateTimePicker16->Size = System::Drawing::Size(142, 19);
+			this->dateTimePicker16->TabIndex = 0;
 			// 
 			// panelBranded
 			// 
@@ -1786,6 +2481,19 @@ private:
 			this->panelOrdered->Visible = false;
 			this->panelOrdered->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panelOrdered_Paint);
 			// 
+			// pictureBoxMem
+			// 
+			this->pictureBoxMem->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->pictureBoxMem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxMem.Image")));
+			this->pictureBoxMem->Location = System::Drawing::Point(-1, 0);
+			this->pictureBoxMem->Name = L"pictureBoxMem";
+			this->pictureBoxMem->Size = System::Drawing::Size(663, 360);
+			this->pictureBoxMem->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBoxMem->TabIndex = 17;
+			this->pictureBoxMem->TabStop = false;
+			// 
 			// panelFaster
 			// 
 			this->panelFaster->AutoScroll = true;
@@ -2515,674 +3223,6 @@ private:
 			this->dateTimePicker1->Size = System::Drawing::Size(142, 19);
 			this->dateTimePicker1->TabIndex = 0;
 			// 
-			// pictureBoxWellcome
-			// 
-			this->pictureBoxWellcome->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBoxWellcome->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxWellcome.Image")));
-			this->pictureBoxWellcome->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxWellcome.InitialImage")));
-			this->pictureBoxWellcome->Location = System::Drawing::Point(0, 0);
-			this->pictureBoxWellcome->Name = L"pictureBoxWellcome";
-			this->pictureBoxWellcome->Size = System::Drawing::Size(661, 360);
-			this->pictureBoxWellcome->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBoxWellcome->TabIndex = 0;
-			this->pictureBoxWellcome->TabStop = false;
-			// 
-			// panelLastochka
-			// 
-			this->panelLastochka->AutoScroll = true;
-			this->panelLastochka->BackColor = System::Drawing::Color::LightBlue;
-			this->panelLastochka->Controls->Add(this->panel6);
-			this->panelLastochka->Controls->Add(this->panel7);
-			this->panelLastochka->Controls->Add(this->panel8);
-			this->panelLastochka->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panelLastochka->Location = System::Drawing::Point(0, 0);
-			this->panelLastochka->Name = L"panelLastochka";
-			this->panelLastochka->Size = System::Drawing::Size(661, 360);
-			this->panelLastochka->TabIndex = 15;
-			this->panelLastochka->Visible = false;
-			// 
-			// panel6
-			// 
-			this->panel6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel6->BackColor = System::Drawing::Color::Azure;
-			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel6->Controls->Add(this->groupBoxLastochka3_1);
-			this->panel6->Controls->Add(this->groupBoxLastochka3_4);
-			this->panel6->Controls->Add(this->groupBoxLastochka3_3);
-			this->panel6->Controls->Add(this->groupBoxLastochka3_2);
-			this->panel6->Controls->Add(this->LastochkaButton3_2);
-			this->panel6->Controls->Add(this->LastochkaButton3_1);
-			this->panel6->Controls->Add(this->dateTimePickerLastochka3);
-			this->panel6->Controls->Add(this->dateTimePicker12);
-			this->panel6->Location = System::Drawing::Point(15, 250);
-			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(631, 100);
-			this->panel6->TabIndex = 12;
-			// 
-			// groupBoxLastochka3_1
-			// 
-			this->groupBoxLastochka3_1->Controls->Add(this->radioLastochka3_1);
-			this->groupBoxLastochka3_1->Location = System::Drawing::Point(3, 0);
-			this->groupBoxLastochka3_1->Name = L"groupBoxLastochka3_1";
-			this->groupBoxLastochka3_1->Size = System::Drawing::Size(114, 97);
-			this->groupBoxLastochka3_1->TabIndex = 8;
-			this->groupBoxLastochka3_1->TabStop = false;
-			this->groupBoxLastochka3_1->Text = L"Тип вагона:";
-			// 
-			// radioLastochka3_1
-			// 
-			this->radioLastochka3_1->AutoSize = true;
-			this->radioLastochka3_1->Checked = true;
-			this->radioLastochka3_1->Location = System::Drawing::Point(6, 50);
-			this->radioLastochka3_1->Name = L"radioLastochka3_1";
-			this->radioLastochka3_1->Size = System::Drawing::Size(49, 17);
-			this->radioLastochka3_1->TabIndex = 5;
-			this->radioLastochka3_1->TabStop = true;
-			this->radioLastochka3_1->Text = L"Купе";
-			this->radioLastochka3_1->UseVisualStyleBackColor = true;
-			// 
-			// groupBoxLastochka3_4
-			// 
-			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_2);
-			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_4);
-			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_3);
-			this->groupBoxLastochka3_4->Controls->Add(this->lblLastochka3_1);
-			this->groupBoxLastochka3_4->Location = System::Drawing::Point(381, 0);
-			this->groupBoxLastochka3_4->Name = L"groupBoxLastochka3_4";
-			this->groupBoxLastochka3_4->Size = System::Drawing::Size(120, 97);
-			this->groupBoxLastochka3_4->TabIndex = 10;
-			this->groupBoxLastochka3_4->TabStop = false;
-			this->groupBoxLastochka3_4->Text = L"Информация:";
-			// 
-			// lblLastochka3_2
-			// 
-			this->lblLastochka3_2->AutoSize = true;
-			this->lblLastochka3_2->Location = System::Drawing::Point(7, 39);
-			this->lblLastochka3_2->Name = L"lblLastochka3_2";
-			this->lblLastochka3_2->Size = System::Drawing::Size(51, 13);
-			this->lblLastochka3_2->TabIndex = 3;
-			this->lblLastochka3_2->Text = L"Мест: 12";
-			// 
-			// lblLastochka3_4
-			// 
-			this->lblLastochka3_4->AutoSize = true;
-			this->lblLastochka3_4->Location = System::Drawing::Point(7, 74);
-			this->lblLastochka3_4->Name = L"lblLastochka3_4";
-			this->lblLastochka3_4->Size = System::Drawing::Size(68, 13);
-			this->lblLastochka3_4->TabIndex = 2;
-			this->lblLastochka3_4->Text = L"Стоимость: ";
-			// 
-			// lblLastochka3_3
-			// 
-			this->lblLastochka3_3->AutoSize = true;
-			this->lblLastochka3_3->Location = System::Drawing::Point(7, 57);
-			this->lblLastochka3_3->Name = L"lblLastochka3_3";
-			this->lblLastochka3_3->Size = System::Drawing::Size(101, 13);
-			this->lblLastochka3_3->TabIndex = 1;
-			this->lblLastochka3_3->Text = L"Путь: НН - Москва";
-			// 
-			// lblLastochka3_1
-			// 
-			this->lblLastochka3_1->AutoSize = true;
-			this->lblLastochka3_1->Location = System::Drawing::Point(7, 21);
-			this->lblLastochka3_1->Name = L"lblLastochka3_1";
-			this->lblLastochka3_1->Size = System::Drawing::Size(109, 13);
-			this->lblLastochka3_1->TabIndex = 0;
-			this->lblLastochka3_1->Text = L"Время: 14:10 - 18:20";
-			// 
-			// groupBoxLastochka3_3
-			// 
-			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_6);
-			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_5);
-			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_4);
-			this->groupBoxLastochka3_3->Controls->Add(this->radioLastochka3_3);
-			this->groupBoxLastochka3_3->Location = System::Drawing::Point(247, 0);
-			this->groupBoxLastochka3_3->Name = L"groupBoxLastochka3_3";
-			this->groupBoxLastochka3_3->Size = System::Drawing::Size(126, 97);
-			this->groupBoxLastochka3_3->TabIndex = 9;
-			this->groupBoxLastochka3_3->TabStop = false;
-			this->groupBoxLastochka3_3->Text = L"Кол-во человек:";
-			// 
-			// radioLastochka3_6
-			// 
-			this->radioLastochka3_6->AutoSize = true;
-			this->radioLastochka3_6->Location = System::Drawing::Point(8, 72);
-			this->radioLastochka3_6->Name = L"radioLastochka3_6";
-			this->radioLastochka3_6->Size = System::Drawing::Size(64, 17);
-			this->radioLastochka3_6->TabIndex = 9;
-			this->radioLastochka3_6->TabStop = true;
-			this->radioLastochka3_6->Text = L"Четыре";
-			this->radioLastochka3_6->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka3_5
-			// 
-			this->radioLastochka3_5->AutoSize = true;
-			this->radioLastochka3_5->Location = System::Drawing::Point(8, 54);
-			this->radioLastochka3_5->Name = L"radioLastochka3_5";
-			this->radioLastochka3_5->Size = System::Drawing::Size(44, 17);
-			this->radioLastochka3_5->TabIndex = 8;
-			this->radioLastochka3_5->TabStop = true;
-			this->radioLastochka3_5->Text = L"Три";
-			this->radioLastochka3_5->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka3_4
-			// 
-			this->radioLastochka3_4->AutoSize = true;
-			this->radioLastochka3_4->Location = System::Drawing::Point(8, 36);
-			this->radioLastochka3_4->Name = L"radioLastochka3_4";
-			this->radioLastochka3_4->Size = System::Drawing::Size(46, 17);
-			this->radioLastochka3_4->TabIndex = 7;
-			this->radioLastochka3_4->TabStop = true;
-			this->radioLastochka3_4->Text = L"Два";
-			this->radioLastochka3_4->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka3_3
-			// 
-			this->radioLastochka3_3->AutoSize = true;
-			this->radioLastochka3_3->Checked = true;
-			this->radioLastochka3_3->Location = System::Drawing::Point(8, 18);
-			this->radioLastochka3_3->Name = L"radioLastochka3_3";
-			this->radioLastochka3_3->Size = System::Drawing::Size(51, 17);
-			this->radioLastochka3_3->TabIndex = 5;
-			this->radioLastochka3_3->TabStop = true;
-			this->radioLastochka3_3->Text = L"Один";
-			this->radioLastochka3_3->UseVisualStyleBackColor = true;
-			// 
-			// groupBoxLastochka3_2
-			// 
-			this->groupBoxLastochka3_2->Controls->Add(this->radioLastochka3_2);
-			this->groupBoxLastochka3_2->Location = System::Drawing::Point(125, 0);
-			this->groupBoxLastochka3_2->Name = L"groupBoxLastochka3_2";
-			this->groupBoxLastochka3_2->Size = System::Drawing::Size(114, 97);
-			this->groupBoxLastochka3_2->TabIndex = 8;
-			this->groupBoxLastochka3_2->TabStop = false;
-			this->groupBoxLastochka3_2->Text = L"Тип места:";
-			// 
-			// radioLastochka3_2
-			// 
-			this->radioLastochka3_2->AutoSize = true;
-			this->radioLastochka3_2->Checked = true;
-			this->radioLastochka3_2->Location = System::Drawing::Point(8, 49);
-			this->radioLastochka3_2->Name = L"radioLastochka3_2";
-			this->radioLastochka3_2->Size = System::Drawing::Size(65, 17);
-			this->radioLastochka3_2->TabIndex = 5;
-			this->radioLastochka3_2->TabStop = true;
-			this->radioLastochka3_2->Text = L"Нижнее";
-			this->radioLastochka3_2->UseVisualStyleBackColor = true;
-			// 
-			// LastochkaButton3_2
-			// 
-			this->LastochkaButton3_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->LastochkaButton3_2->BackColor = System::Drawing::Color::Gold;
-			this->LastochkaButton3_2->FlatAppearance->BorderSize = 0;
-			this->LastochkaButton3_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LastochkaButton3_2->Location = System::Drawing::Point(524, 0);
-			this->LastochkaButton3_2->Name = L"LastochkaButton3_2";
-			this->LastochkaButton3_2->Size = System::Drawing::Size(105, 41);
-			this->LastochkaButton3_2->TabIndex = 3;
-			this->LastochkaButton3_2->Text = L"Заказать";
-			this->LastochkaButton3_2->UseVisualStyleBackColor = false;
-			this->LastochkaButton3_2->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton3_2_Click);
-			// 
-			// LastochkaButton3_1
-			// 
-			this->LastochkaButton3_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->LastochkaButton3_1->BackColor = System::Drawing::Color::MediumAquamarine;
-			this->LastochkaButton3_1->FlatAppearance->BorderSize = 0;
-			this->LastochkaButton3_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LastochkaButton3_1->Location = System::Drawing::Point(524, 41);
-			this->LastochkaButton3_1->Name = L"LastochkaButton3_1";
-			this->LastochkaButton3_1->Size = System::Drawing::Size(105, 40);
-			this->LastochkaButton3_1->TabIndex = 2;
-			this->LastochkaButton3_1->Text = L"Купить";
-			this->LastochkaButton3_1->UseVisualStyleBackColor = false;
-			this->LastochkaButton3_1->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton3_1_Click);
-			// 
-			// dateTimePickerLastochka3
-			// 
-			this->dateTimePickerLastochka3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->dateTimePickerLastochka3->CalendarTitleForeColor = System::Drawing::Color::White;
-			this->dateTimePickerLastochka3->Location = System::Drawing::Point(524, 81);
-			this->dateTimePickerLastochka3->Name = L"dateTimePickerLastochka3";
-			this->dateTimePickerLastochka3->Size = System::Drawing::Size(106, 19);
-			this->dateTimePickerLastochka3->TabIndex = 1;
-			// 
-			// dateTimePicker12
-			// 
-			this->dateTimePicker12->Location = System::Drawing::Point(519, 102);
-			this->dateTimePicker12->Name = L"dateTimePicker12";
-			this->dateTimePicker12->Size = System::Drawing::Size(142, 19);
-			this->dateTimePicker12->TabIndex = 0;
-			// 
-			// panel7
-			// 
-			this->panel7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel7->BackColor = System::Drawing::Color::Azure;
-			this->panel7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel7->Controls->Add(this->groupBoxLastochka2_1);
-			this->panel7->Controls->Add(this->groupBoxLastochka2_4);
-			this->panel7->Controls->Add(this->groupBoxLastochka2_3);
-			this->panel7->Controls->Add(this->groupBoxLastochka2_2);
-			this->panel7->Controls->Add(this->LastochkaButton2_2);
-			this->panel7->Controls->Add(this->LastochkaButton2_1);
-			this->panel7->Controls->Add(this->dateTimePickerLastochka2);
-			this->panel7->Controls->Add(this->dateTimePicker14);
-			this->panel7->Location = System::Drawing::Point(15, 130);
-			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(631, 100);
-			this->panel7->TabIndex = 11;
-			// 
-			// groupBoxLastochka2_1
-			// 
-			this->groupBoxLastochka2_1->Controls->Add(this->radioLastochka2_1);
-			this->groupBoxLastochka2_1->Location = System::Drawing::Point(3, 0);
-			this->groupBoxLastochka2_1->Name = L"groupBoxLastochka2_1";
-			this->groupBoxLastochka2_1->Size = System::Drawing::Size(114, 97);
-			this->groupBoxLastochka2_1->TabIndex = 8;
-			this->groupBoxLastochka2_1->TabStop = false;
-			this->groupBoxLastochka2_1->Text = L"Тип вагона:";
-			// 
-			// radioLastochka2_1
-			// 
-			this->radioLastochka2_1->AutoSize = true;
-			this->radioLastochka2_1->Checked = true;
-			this->radioLastochka2_1->Location = System::Drawing::Point(6, 47);
-			this->radioLastochka2_1->Name = L"radioLastochka2_1";
-			this->radioLastochka2_1->Size = System::Drawing::Size(49, 17);
-			this->radioLastochka2_1->TabIndex = 5;
-			this->radioLastochka2_1->TabStop = true;
-			this->radioLastochka2_1->Text = L"Купе";
-			this->radioLastochka2_1->UseVisualStyleBackColor = true;
-			// 
-			// groupBoxLastochka2_4
-			// 
-			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_2);
-			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_4);
-			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_3);
-			this->groupBoxLastochka2_4->Controls->Add(this->lblLastochka2_1);
-			this->groupBoxLastochka2_4->Location = System::Drawing::Point(381, 0);
-			this->groupBoxLastochka2_4->Name = L"groupBoxLastochka2_4";
-			this->groupBoxLastochka2_4->Size = System::Drawing::Size(120, 97);
-			this->groupBoxLastochka2_4->TabIndex = 10;
-			this->groupBoxLastochka2_4->TabStop = false;
-			this->groupBoxLastochka2_4->Text = L"Информация:";
-			// 
-			// lblLastochka2_2
-			// 
-			this->lblLastochka2_2->AutoSize = true;
-			this->lblLastochka2_2->Location = System::Drawing::Point(7, 39);
-			this->lblLastochka2_2->Name = L"lblLastochka2_2";
-			this->lblLastochka2_2->Size = System::Drawing::Size(51, 13);
-			this->lblLastochka2_2->TabIndex = 3;
-			this->lblLastochka2_2->Text = L"Мест: 22";
-			// 
-			// lblLastochka2_4
-			// 
-			this->lblLastochka2_4->AutoSize = true;
-			this->lblLastochka2_4->Location = System::Drawing::Point(7, 74);
-			this->lblLastochka2_4->Name = L"lblLastochka2_4";
-			this->lblLastochka2_4->Size = System::Drawing::Size(68, 13);
-			this->lblLastochka2_4->TabIndex = 2;
-			this->lblLastochka2_4->Text = L"Стоимость: ";
-			// 
-			// lblLastochka2_3
-			// 
-			this->lblLastochka2_3->AutoSize = true;
-			this->lblLastochka2_3->Location = System::Drawing::Point(7, 57);
-			this->lblLastochka2_3->Name = L"lblLastochka2_3";
-			this->lblLastochka2_3->Size = System::Drawing::Size(101, 13);
-			this->lblLastochka2_3->TabIndex = 1;
-			this->lblLastochka2_3->Text = L"Путь: НН - Москва";
-			// 
-			// lblLastochka2_1
-			// 
-			this->lblLastochka2_1->AutoSize = true;
-			this->lblLastochka2_1->Location = System::Drawing::Point(7, 21);
-			this->lblLastochka2_1->Name = L"lblLastochka2_1";
-			this->lblLastochka2_1->Size = System::Drawing::Size(109, 13);
-			this->lblLastochka2_1->TabIndex = 0;
-			this->lblLastochka2_1->Text = L"Время: 10:45 - 14:00";
-			// 
-			// groupBoxLastochka2_3
-			// 
-			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_6);
-			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_5);
-			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_4);
-			this->groupBoxLastochka2_3->Controls->Add(this->radioLastochka2_3);
-			this->groupBoxLastochka2_3->Location = System::Drawing::Point(247, 0);
-			this->groupBoxLastochka2_3->Name = L"groupBoxLastochka2_3";
-			this->groupBoxLastochka2_3->Size = System::Drawing::Size(126, 97);
-			this->groupBoxLastochka2_3->TabIndex = 9;
-			this->groupBoxLastochka2_3->TabStop = false;
-			this->groupBoxLastochka2_3->Text = L"Кол-во человек:";
-			// 
-			// radioLastochka2_6
-			// 
-			this->radioLastochka2_6->AutoSize = true;
-			this->radioLastochka2_6->Location = System::Drawing::Point(8, 72);
-			this->radioLastochka2_6->Name = L"radioLastochka2_6";
-			this->radioLastochka2_6->Size = System::Drawing::Size(64, 17);
-			this->radioLastochka2_6->TabIndex = 9;
-			this->radioLastochka2_6->TabStop = true;
-			this->radioLastochka2_6->Text = L"Четыре";
-			this->radioLastochka2_6->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka2_5
-			// 
-			this->radioLastochka2_5->AutoSize = true;
-			this->radioLastochka2_5->Location = System::Drawing::Point(8, 54);
-			this->radioLastochka2_5->Name = L"radioLastochka2_5";
-			this->radioLastochka2_5->Size = System::Drawing::Size(44, 17);
-			this->radioLastochka2_5->TabIndex = 8;
-			this->radioLastochka2_5->TabStop = true;
-			this->radioLastochka2_5->Text = L"Три";
-			this->radioLastochka2_5->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka2_4
-			// 
-			this->radioLastochka2_4->AutoSize = true;
-			this->radioLastochka2_4->Location = System::Drawing::Point(8, 36);
-			this->radioLastochka2_4->Name = L"radioLastochka2_4";
-			this->radioLastochka2_4->Size = System::Drawing::Size(46, 17);
-			this->radioLastochka2_4->TabIndex = 7;
-			this->radioLastochka2_4->TabStop = true;
-			this->radioLastochka2_4->Text = L"Два";
-			this->radioLastochka2_4->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka2_3
-			// 
-			this->radioLastochka2_3->AutoSize = true;
-			this->radioLastochka2_3->Checked = true;
-			this->radioLastochka2_3->Location = System::Drawing::Point(8, 18);
-			this->radioLastochka2_3->Name = L"radioLastochka2_3";
-			this->radioLastochka2_3->Size = System::Drawing::Size(51, 17);
-			this->radioLastochka2_3->TabIndex = 5;
-			this->radioLastochka2_3->TabStop = true;
-			this->radioLastochka2_3->Text = L"Один";
-			this->radioLastochka2_3->UseVisualStyleBackColor = true;
-			// 
-			// groupBoxLastochka2_2
-			// 
-			this->groupBoxLastochka2_2->Controls->Add(this->radioLastochka2_2);
-			this->groupBoxLastochka2_2->Location = System::Drawing::Point(125, 0);
-			this->groupBoxLastochka2_2->Name = L"groupBoxLastochka2_2";
-			this->groupBoxLastochka2_2->Size = System::Drawing::Size(114, 97);
-			this->groupBoxLastochka2_2->TabIndex = 8;
-			this->groupBoxLastochka2_2->TabStop = false;
-			this->groupBoxLastochka2_2->Text = L"Тип места:";
-			// 
-			// radioLastochka2_2
-			// 
-			this->radioLastochka2_2->AutoSize = true;
-			this->radioLastochka2_2->Checked = true;
-			this->radioLastochka2_2->Location = System::Drawing::Point(8, 47);
-			this->radioLastochka2_2->Name = L"radioLastochka2_2";
-			this->radioLastochka2_2->Size = System::Drawing::Size(65, 17);
-			this->radioLastochka2_2->TabIndex = 5;
-			this->radioLastochka2_2->TabStop = true;
-			this->radioLastochka2_2->Text = L"Нижнее";
-			this->radioLastochka2_2->UseVisualStyleBackColor = true;
-			// 
-			// LastochkaButton2_2
-			// 
-			this->LastochkaButton2_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->LastochkaButton2_2->BackColor = System::Drawing::Color::Gold;
-			this->LastochkaButton2_2->FlatAppearance->BorderSize = 0;
-			this->LastochkaButton2_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LastochkaButton2_2->Location = System::Drawing::Point(524, 0);
-			this->LastochkaButton2_2->Name = L"LastochkaButton2_2";
-			this->LastochkaButton2_2->Size = System::Drawing::Size(105, 41);
-			this->LastochkaButton2_2->TabIndex = 3;
-			this->LastochkaButton2_2->Text = L"Заказать";
-			this->LastochkaButton2_2->UseVisualStyleBackColor = false;
-			this->LastochkaButton2_2->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton2_2_Click);
-			// 
-			// LastochkaButton2_1
-			// 
-			this->LastochkaButton2_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->LastochkaButton2_1->BackColor = System::Drawing::Color::MediumAquamarine;
-			this->LastochkaButton2_1->FlatAppearance->BorderSize = 0;
-			this->LastochkaButton2_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LastochkaButton2_1->Location = System::Drawing::Point(524, 41);
-			this->LastochkaButton2_1->Name = L"LastochkaButton2_1";
-			this->LastochkaButton2_1->Size = System::Drawing::Size(105, 40);
-			this->LastochkaButton2_1->TabIndex = 2;
-			this->LastochkaButton2_1->Text = L"Купить";
-			this->LastochkaButton2_1->UseVisualStyleBackColor = false;
-			this->LastochkaButton2_1->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton2_1_Click);
-			// 
-			// dateTimePickerLastochka2
-			// 
-			this->dateTimePickerLastochka2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->dateTimePickerLastochka2->CalendarTitleForeColor = System::Drawing::Color::White;
-			this->dateTimePickerLastochka2->Location = System::Drawing::Point(524, 81);
-			this->dateTimePickerLastochka2->Name = L"dateTimePickerLastochka2";
-			this->dateTimePickerLastochka2->Size = System::Drawing::Size(106, 19);
-			this->dateTimePickerLastochka2->TabIndex = 1;
-			// 
-			// dateTimePicker14
-			// 
-			this->dateTimePicker14->Location = System::Drawing::Point(519, 102);
-			this->dateTimePicker14->Name = L"dateTimePicker14";
-			this->dateTimePicker14->Size = System::Drawing::Size(142, 19);
-			this->dateTimePicker14->TabIndex = 0;
-			// 
-			// panel8
-			// 
-			this->panel8->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel8->BackColor = System::Drawing::Color::Azure;
-			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel8->Controls->Add(this->groupBoxLastochka1_4);
-			this->panel8->Controls->Add(this->groupBoxLastochka1_3);
-			this->panel8->Controls->Add(this->groupBoxLastochka1_2);
-			this->panel8->Controls->Add(this->groupBoxLastochka1_1);
-			this->panel8->Controls->Add(this->LastochkaButton1_2);
-			this->panel8->Controls->Add(this->LastochkaButton1_1);
-			this->panel8->Controls->Add(this->dateTimePickerLastochka1);
-			this->panel8->Controls->Add(this->dateTimePicker16);
-			this->panel8->Location = System::Drawing::Point(15, 10);
-			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(631, 100);
-			this->panel8->TabIndex = 0;
-			// 
-			// groupBoxLastochka1_4
-			// 
-			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_2);
-			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_4);
-			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_3);
-			this->groupBoxLastochka1_4->Controls->Add(this->lblLastochka1_1);
-			this->groupBoxLastochka1_4->Location = System::Drawing::Point(381, 0);
-			this->groupBoxLastochka1_4->Name = L"groupBoxLastochka1_4";
-			this->groupBoxLastochka1_4->Size = System::Drawing::Size(120, 97);
-			this->groupBoxLastochka1_4->TabIndex = 10;
-			this->groupBoxLastochka1_4->TabStop = false;
-			this->groupBoxLastochka1_4->Text = L"Информация:";
-			// 
-			// lblLastochka1_2
-			// 
-			this->lblLastochka1_2->AutoSize = true;
-			this->lblLastochka1_2->Location = System::Drawing::Point(7, 39);
-			this->lblLastochka1_2->Name = L"lblLastochka1_2";
-			this->lblLastochka1_2->Size = System::Drawing::Size(51, 13);
-			this->lblLastochka1_2->TabIndex = 3;
-			this->lblLastochka1_2->Text = L"Мест: 48";
-			// 
-			// lblLastochka1_4
-			// 
-			this->lblLastochka1_4->AutoSize = true;
-			this->lblLastochka1_4->Location = System::Drawing::Point(7, 74);
-			this->lblLastochka1_4->Name = L"lblLastochka1_4";
-			this->lblLastochka1_4->Size = System::Drawing::Size(68, 13);
-			this->lblLastochka1_4->TabIndex = 2;
-			this->lblLastochka1_4->Text = L"Стоимость: ";
-			// 
-			// lblLastochka1_3
-			// 
-			this->lblLastochka1_3->AutoSize = true;
-			this->lblLastochka1_3->Location = System::Drawing::Point(7, 57);
-			this->lblLastochka1_3->Name = L"lblLastochka1_3";
-			this->lblLastochka1_3->Size = System::Drawing::Size(101, 13);
-			this->lblLastochka1_3->TabIndex = 1;
-			this->lblLastochka1_3->Text = L"Путь: НН - Москва";
-			// 
-			// lblLastochka1_1
-			// 
-			this->lblLastochka1_1->AutoSize = true;
-			this->lblLastochka1_1->Location = System::Drawing::Point(7, 21);
-			this->lblLastochka1_1->Name = L"lblLastochka1_1";
-			this->lblLastochka1_1->Size = System::Drawing::Size(97, 13);
-			this->lblLastochka1_1->TabIndex = 0;
-			this->lblLastochka1_1->Text = L"Время: 2:40 - 5:35";
-			// 
-			// groupBoxLastochka1_3
-			// 
-			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_6);
-			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_5);
-			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_4);
-			this->groupBoxLastochka1_3->Controls->Add(this->radioLastochka1_3);
-			this->groupBoxLastochka1_3->Location = System::Drawing::Point(247, 0);
-			this->groupBoxLastochka1_3->Name = L"groupBoxLastochka1_3";
-			this->groupBoxLastochka1_3->Size = System::Drawing::Size(126, 97);
-			this->groupBoxLastochka1_3->TabIndex = 9;
-			this->groupBoxLastochka1_3->TabStop = false;
-			this->groupBoxLastochka1_3->Text = L"Кол-во человек:";
-			// 
-			// radioLastochka1_6
-			// 
-			this->radioLastochka1_6->AutoSize = true;
-			this->radioLastochka1_6->Location = System::Drawing::Point(8, 72);
-			this->radioLastochka1_6->Name = L"radioLastochka1_6";
-			this->radioLastochka1_6->Size = System::Drawing::Size(64, 17);
-			this->radioLastochka1_6->TabIndex = 9;
-			this->radioLastochka1_6->TabStop = true;
-			this->radioLastochka1_6->Text = L"Четыре";
-			this->radioLastochka1_6->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka1_5
-			// 
-			this->radioLastochka1_5->AutoSize = true;
-			this->radioLastochka1_5->Location = System::Drawing::Point(8, 54);
-			this->radioLastochka1_5->Name = L"radioLastochka1_5";
-			this->radioLastochka1_5->Size = System::Drawing::Size(44, 17);
-			this->radioLastochka1_5->TabIndex = 8;
-			this->radioLastochka1_5->TabStop = true;
-			this->radioLastochka1_5->Text = L"Три";
-			this->radioLastochka1_5->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka1_4
-			// 
-			this->radioLastochka1_4->AutoSize = true;
-			this->radioLastochka1_4->Location = System::Drawing::Point(8, 36);
-			this->radioLastochka1_4->Name = L"radioLastochka1_4";
-			this->radioLastochka1_4->Size = System::Drawing::Size(46, 17);
-			this->radioLastochka1_4->TabIndex = 7;
-			this->radioLastochka1_4->TabStop = true;
-			this->radioLastochka1_4->Text = L"Два";
-			this->radioLastochka1_4->UseVisualStyleBackColor = true;
-			// 
-			// radioLastochka1_3
-			// 
-			this->radioLastochka1_3->AutoSize = true;
-			this->radioLastochka1_3->Checked = true;
-			this->radioLastochka1_3->Location = System::Drawing::Point(8, 18);
-			this->radioLastochka1_3->Name = L"radioLastochka1_3";
-			this->radioLastochka1_3->Size = System::Drawing::Size(51, 17);
-			this->radioLastochka1_3->TabIndex = 5;
-			this->radioLastochka1_3->TabStop = true;
-			this->radioLastochka1_3->Text = L"Один";
-			this->radioLastochka1_3->UseVisualStyleBackColor = true;
-			// 
-			// groupBoxLastochka1_2
-			// 
-			this->groupBoxLastochka1_2->Controls->Add(this->radioLastochka1_2);
-			this->groupBoxLastochka1_2->Location = System::Drawing::Point(125, 0);
-			this->groupBoxLastochka1_2->Name = L"groupBoxLastochka1_2";
-			this->groupBoxLastochka1_2->Size = System::Drawing::Size(114, 97);
-			this->groupBoxLastochka1_2->TabIndex = 8;
-			this->groupBoxLastochka1_2->TabStop = false;
-			this->groupBoxLastochka1_2->Text = L"Тип места:";
-			// 
-			// radioLastochka1_2
-			// 
-			this->radioLastochka1_2->AutoSize = true;
-			this->radioLastochka1_2->Checked = true;
-			this->radioLastochka1_2->Location = System::Drawing::Point(10, 47);
-			this->radioLastochka1_2->Name = L"radioLastochka1_2";
-			this->radioLastochka1_2->Size = System::Drawing::Size(65, 17);
-			this->radioLastochka1_2->TabIndex = 5;
-			this->radioLastochka1_2->TabStop = true;
-			this->radioLastochka1_2->Text = L"Нижнее";
-			this->radioLastochka1_2->UseVisualStyleBackColor = true;
-			// 
-			// groupBoxLastochka1_1
-			// 
-			this->groupBoxLastochka1_1->Controls->Add(this->radioLastochka1_1);
-			this->groupBoxLastochka1_1->Location = System::Drawing::Point(3, 0);
-			this->groupBoxLastochka1_1->Name = L"groupBoxLastochka1_1";
-			this->groupBoxLastochka1_1->Size = System::Drawing::Size(114, 97);
-			this->groupBoxLastochka1_1->TabIndex = 7;
-			this->groupBoxLastochka1_1->TabStop = false;
-			this->groupBoxLastochka1_1->Text = L"Тип вагона:";
-			// 
-			// radioLastochka1_1
-			// 
-			this->radioLastochka1_1->AutoSize = true;
-			this->radioLastochka1_1->Checked = true;
-			this->radioLastochka1_1->Location = System::Drawing::Point(6, 47);
-			this->radioLastochka1_1->Name = L"radioLastochka1_1";
-			this->radioLastochka1_1->Size = System::Drawing::Size(49, 17);
-			this->radioLastochka1_1->TabIndex = 5;
-			this->radioLastochka1_1->TabStop = true;
-			this->radioLastochka1_1->Text = L"Купе";
-			this->radioLastochka1_1->UseVisualStyleBackColor = true;
-			// 
-			// LastochkaButton1_2
-			// 
-			this->LastochkaButton1_2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->LastochkaButton1_2->BackColor = System::Drawing::Color::Gold;
-			this->LastochkaButton1_2->FlatAppearance->BorderSize = 0;
-			this->LastochkaButton1_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LastochkaButton1_2->Location = System::Drawing::Point(524, 0);
-			this->LastochkaButton1_2->Name = L"LastochkaButton1_2";
-			this->LastochkaButton1_2->Size = System::Drawing::Size(105, 41);
-			this->LastochkaButton1_2->TabIndex = 3;
-			this->LastochkaButton1_2->Text = L"Заказать";
-			this->LastochkaButton1_2->UseVisualStyleBackColor = false;
-			this->LastochkaButton1_2->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton1_2_Click);
-			// 
-			// LastochkaButton1_1
-			// 
-			this->LastochkaButton1_1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->LastochkaButton1_1->BackColor = System::Drawing::Color::MediumAquamarine;
-			this->LastochkaButton1_1->FlatAppearance->BorderSize = 0;
-			this->LastochkaButton1_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LastochkaButton1_1->Location = System::Drawing::Point(524, 41);
-			this->LastochkaButton1_1->Name = L"LastochkaButton1_1";
-			this->LastochkaButton1_1->Size = System::Drawing::Size(105, 40);
-			this->LastochkaButton1_1->TabIndex = 2;
-			this->LastochkaButton1_1->Text = L"Купить";
-			this->LastochkaButton1_1->UseVisualStyleBackColor = false;
-			this->LastochkaButton1_1->Click += gcnew System::EventHandler(this, &MyForm::LastochkaButton1_1_Click);
-			// 
-			// dateTimePickerLastochka1
-			// 
-			this->dateTimePickerLastochka1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->dateTimePickerLastochka1->CalendarTitleForeColor = System::Drawing::Color::White;
-			this->dateTimePickerLastochka1->Location = System::Drawing::Point(524, 81);
-			this->dateTimePickerLastochka1->Name = L"dateTimePickerLastochka1";
-			this->dateTimePickerLastochka1->Size = System::Drawing::Size(106, 19);
-			this->dateTimePickerLastochka1->TabIndex = 1;
-			// 
-			// dateTimePicker16
-			// 
-			this->dateTimePicker16->Location = System::Drawing::Point(519, 102);
-			this->dateTimePicker16->Name = L"dateTimePicker16";
-			this->dateTimePicker16->Size = System::Drawing::Size(142, 19);
-			this->dateTimePicker16->TabIndex = 0;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -3205,62 +3245,6 @@ private:
 			this->panelTitleBar->PerformLayout();
 			this->panel1->ResumeLayout(false);
 			this->panelDesktopPanel->ResumeLayout(false);
-			this->panelBranded->ResumeLayout(false);
-			this->panel3->ResumeLayout(false);
-			this->groupBox4->ResumeLayout(false);
-			this->groupBox4->PerformLayout();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
-			this->groupBox3->PerformLayout();
-			this->panel4->ResumeLayout(false);
-			this->groupBox8->ResumeLayout(false);
-			this->groupBox8->PerformLayout();
-			this->groupBox5->ResumeLayout(false);
-			this->groupBox5->PerformLayout();
-			this->groupBox6->ResumeLayout(false);
-			this->groupBox6->PerformLayout();
-			this->groupBox7->ResumeLayout(false);
-			this->groupBox7->PerformLayout();
-			this->panel5->ResumeLayout(false);
-			this->groupBox9->ResumeLayout(false);
-			this->groupBox9->PerformLayout();
-			this->groupBox10->ResumeLayout(false);
-			this->groupBox10->PerformLayout();
-			this->groupBox11->ResumeLayout(false);
-			this->groupBox11->PerformLayout();
-			this->groupBox12->ResumeLayout(false);
-			this->groupBox12->PerformLayout();
-			this->panelFaster->ResumeLayout(false);
-			this->activePanelFast_3->ResumeLayout(false);
-			this->groupBoxFast_3_4->ResumeLayout(false);
-			this->groupBoxFast_3_4->PerformLayout();
-			this->groupBoxFast_3_3->ResumeLayout(false);
-			this->groupBoxFast_3_3->PerformLayout();
-			this->groupBoxFast_3_2->ResumeLayout(false);
-			this->groupBoxFast_3_2->PerformLayout();
-			this->groupBoxFast_3_1->ResumeLayout(false);
-			this->groupBoxFast_3_1->PerformLayout();
-			this->activePanelFast_2->ResumeLayout(false);
-			this->groupBoxFast_2_4->ResumeLayout(false);
-			this->groupBoxFast_2_4->PerformLayout();
-			this->groupBoxFast_2_3->ResumeLayout(false);
-			this->groupBoxFast_2_3->PerformLayout();
-			this->groupBoxFast_2_2->ResumeLayout(false);
-			this->groupBoxFast_2_2->PerformLayout();
-			this->groupBoxFast_2_1->ResumeLayout(false);
-			this->groupBoxFast_2_1->PerformLayout();
-			this->activePanelFast_1->ResumeLayout(false);
-			this->groupBoxFast_1_4->ResumeLayout(false);
-			this->groupBoxFast_1_4->PerformLayout();
-			this->groupBoxFast_1_3->ResumeLayout(false);
-			this->groupBoxFast_1_3->PerformLayout();
-			this->groupBoxFast_1_2->ResumeLayout(false);
-			this->groupBoxFast_1_2->PerformLayout();
-			this->groupBoxFast_1_1->ResumeLayout(false);
-			this->groupBoxFast_1_1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxWellcome))->EndInit();
 			this->panelLastochka->ResumeLayout(false);
 			this->panel6->ResumeLayout(false);
@@ -3290,6 +3274,63 @@ private:
 			this->groupBoxLastochka1_2->PerformLayout();
 			this->groupBoxLastochka1_1->ResumeLayout(false);
 			this->groupBoxLastochka1_1->PerformLayout();
+			this->panelBranded->ResumeLayout(false);
+			this->panel3->ResumeLayout(false);
+			this->groupBox4->ResumeLayout(false);
+			this->groupBox4->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
+			this->groupBox3->ResumeLayout(false);
+			this->groupBox3->PerformLayout();
+			this->panel4->ResumeLayout(false);
+			this->groupBox8->ResumeLayout(false);
+			this->groupBox8->PerformLayout();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox5->PerformLayout();
+			this->groupBox6->ResumeLayout(false);
+			this->groupBox6->PerformLayout();
+			this->groupBox7->ResumeLayout(false);
+			this->groupBox7->PerformLayout();
+			this->panel5->ResumeLayout(false);
+			this->groupBox9->ResumeLayout(false);
+			this->groupBox9->PerformLayout();
+			this->groupBox10->ResumeLayout(false);
+			this->groupBox10->PerformLayout();
+			this->groupBox11->ResumeLayout(false);
+			this->groupBox11->PerformLayout();
+			this->groupBox12->ResumeLayout(false);
+			this->groupBox12->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxMem))->EndInit();
+			this->panelFaster->ResumeLayout(false);
+			this->activePanelFast_3->ResumeLayout(false);
+			this->groupBoxFast_3_4->ResumeLayout(false);
+			this->groupBoxFast_3_4->PerformLayout();
+			this->groupBoxFast_3_3->ResumeLayout(false);
+			this->groupBoxFast_3_3->PerformLayout();
+			this->groupBoxFast_3_2->ResumeLayout(false);
+			this->groupBoxFast_3_2->PerformLayout();
+			this->groupBoxFast_3_1->ResumeLayout(false);
+			this->groupBoxFast_3_1->PerformLayout();
+			this->activePanelFast_2->ResumeLayout(false);
+			this->groupBoxFast_2_4->ResumeLayout(false);
+			this->groupBoxFast_2_4->PerformLayout();
+			this->groupBoxFast_2_3->ResumeLayout(false);
+			this->groupBoxFast_2_3->PerformLayout();
+			this->groupBoxFast_2_2->ResumeLayout(false);
+			this->groupBoxFast_2_2->PerformLayout();
+			this->groupBoxFast_2_1->ResumeLayout(false);
+			this->groupBoxFast_2_1->PerformLayout();
+			this->activePanelFast_1->ResumeLayout(false);
+			this->groupBoxFast_1_4->ResumeLayout(false);
+			this->groupBoxFast_1_4->PerformLayout();
+			this->groupBoxFast_1_3->ResumeLayout(false);
+			this->groupBoxFast_1_3->PerformLayout();
+			this->groupBoxFast_1_2->ResumeLayout(false);
+			this->groupBoxFast_1_2->PerformLayout();
+			this->groupBoxFast_1_1->ResumeLayout(false);
+			this->groupBoxFast_1_1->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -3318,8 +3359,12 @@ private:
 	private: System::Void btnMinimaze_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->WindowState = System::Windows::Forms::FormWindowState::Minimized;
 	}
-	private: System::Void panelTitleBar_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 
+	private: System::Void MyForm_Transperent100(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		MyForm::Opacity = 1.0;
+	}
+	private: System::Void MyForm_Transperent45(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		MyForm::Opacity = 0.65;
 	}
 	private: System::Void MyForm_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (e->Button != System::Windows::Forms::MouseButtons::Left)
@@ -3336,6 +3381,7 @@ private:
 	private: System::Void MyForm_Home(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (!back) {
 			backHome();
+			MyForm::Refresh();
 		}
 		back = true;
 		lblTitle->Text = "Wellcome";

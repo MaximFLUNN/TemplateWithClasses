@@ -1,4 +1,5 @@
   Task5Railwayv2.MyForm.resources - Embedded, ContainedInManifestFile, 
+  Task5Railwayv2.MyLoaderForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Task5Railway_v2, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
 	hash=SHA1, flags=PublicKey
@@ -136,3 +137,9 @@ Class Task5Railwayv2.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     OnClickDel(Object, EventArgs): PrivateScope, Public, HideBySig
     OnClickBuy(Object, EventArgs): PrivateScope, Public, HideBySig
     OnClickInfo(Object, EventArgs): PrivateScope, Public, HideBySig
+Class Task5Railwayv2.MyLoaderForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 xmove : Public
+    Int32 ymove : Public
