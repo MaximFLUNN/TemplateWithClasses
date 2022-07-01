@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1)-Task-one-main.cpp" />
+    <ClCompile Include="LongLong_class_number.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LongLong_class_number.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

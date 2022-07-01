@@ -1,0 +1,2 @@
+C:\Users\itmm-2112-a\Desktop\TemplateWithClasses-workbranch\solverizer\Debug\problem.pdb
+C:\Users\itmm-2112-a\Desktop\TemplateWithClasses-workbranch\solverizer\problem\Debug\problem.pdb

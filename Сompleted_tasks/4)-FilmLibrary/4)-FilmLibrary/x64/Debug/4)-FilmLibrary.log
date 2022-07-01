@@ -1,0 +1,3 @@
+﻿  Main.cpp
+C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\4)-FilmLibrary\4)-FilmLibrary\Main.cpp(5,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  4)-FilmLibrary.vcxproj -> C:\Users\77777\OneDrive\Рабочий стол\Project station v3\TemplateWithClasses-workbranch\Сompleted_tasks\4)-FilmLibrary\x64\Debug\4)-FilmLibrary.exe

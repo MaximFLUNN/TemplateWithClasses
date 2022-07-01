@@ -1,0 +1,10 @@
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\x64\Debug\Task5Railway_v2.vcxproj.AssemblyReference.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\x64\Debug\Task5Railway_v2.vcxproj.SuggestedBindingRedirects.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\x64\Debug\Task5Railwayv2.MyForm.resources
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\x64\Debug\Task5Railway_v2.vcxproj.GenerateResource.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5Railway_v2\Task5Railway_v2\x64\Debug\Task5Railwayv2.MyLoaderForm.resources
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5UltrakRyt\Task5Railway_v2\x64\Debug\Task5Railway_v2.vcxproj.AssemblyReference.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5UltrakRyt\Task5Railway_v2\x64\Debug\Task5Railway_v2.vcxproj.SuggestedBindingRedirects.cache
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5UltrakRyt\Task5Railway_v2\x64\Debug\Task5Railwayv2.MyForm.resources
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5UltrakRyt\Task5Railway_v2\x64\Debug\Task5Railwayv2.MyLoaderForm.resources
+D:\Project_station_v3\Project station v2\Сompleted_tasks\Task5UltrakRyt\Task5Railway_v2\x64\Debug\Task5Railway_v2.vcxproj.GenerateResource.cache
